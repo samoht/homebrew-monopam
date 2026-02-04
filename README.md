@@ -22,22 +22,12 @@ brew tap gazagnaire.org/monopam https://tangled.org/gazagnaire.org/homebrew-mono
 ## Usage
 
 ```bash
-# Install from source (builds on your machine)
+# Install pre-built binary (fast)
+brew install prune
+brew install irmin crow agent mdns-query uniboot
+
+# Or build from source
 brew install --HEAD prune
-brew install --HEAD irmin
-brew install --HEAD crow
-
-# Or install all
-brew install --HEAD prune irmin crow
-```
-
-## Requirements
-
-Building from source requires OCaml toolchain:
-
-```bash
-brew install ocaml opam
-opam init
 ```
 
 ## License
