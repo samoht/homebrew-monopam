@@ -7,7 +7,7 @@ class Prune < Formula
   on_macos do
     on_arm do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/prune-20260204.arm64_sonoma.bottle.tar.gz"
-      sha256 "917b5672871221900c67414e7d50d91a5b9586631d246111d8a9ce78a4d1ee77"
+      sha256 "1625f6d9238a5104031306c77b0a3bf357ff64a21cb315020f0e4847a74ce1ac"
     end
     on_intel do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/prune-latest.sonoma.bottle.tar.gz"
