@@ -5,7 +5,7 @@ Homebrew tap.
 ## Installation
 
 ```bash
-brew tap gazagnaire.org/monopam https://tangled.org/gazagnaire.org/homebrew-monopam.git
+brew tap samoht/monopam
 ```
 
 ## Available Formulas
