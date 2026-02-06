@@ -7,7 +7,7 @@ class Precommit < Formula
   on_macos do
     on_arm do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/precommit-20260206.arm64_sonoma.bottle.tar.gz"
-      sha256 "f033b4b7f865f6fe046bb2f78c4a8ae813090fdff626f86d346505fc1101b404"
+      sha256 "65da2cc3589dc9514c9102d183fac67cc714e565550e18053ff389554ecf8b5f"
     end
     on_intel do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/precommit-latest.sonoma.bottle.tar.gz"

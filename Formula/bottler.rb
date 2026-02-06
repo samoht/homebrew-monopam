@@ -7,7 +7,7 @@ class Bottler < Formula
   on_macos do
     on_arm do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/bottler-20260206.arm64_sonoma.bottle.tar.gz"
-      sha256 "080065f3d08e2b74a72841823b5650df5ba42d38ecce960f4dd55e0f0fe8d6f0"
+      sha256 "86b801e734558de338930bf7ec69350dd9bf56c0ddb917d90bc218ac6f59b8b0"
     end
     on_intel do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/bottler-latest.sonoma.bottle.tar.gz"
