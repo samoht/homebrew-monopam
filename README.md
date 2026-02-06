@@ -13,7 +13,7 @@ brew tap samoht/monopam
 | Formula | Description |
 |---------|-------------|
 | `merlint` | Opinionated OCaml linter powered by Merlin |
-| `prune` | Dead code remover for OCaml .mli files |
+| `pruner` | Dead code remover for OCaml .mli files |
 | `irmin` | Content-addressable store with Git support |
 | `crow` | Crowbar campaign orchestrator for AFL fuzzing |
 | `agent` | Claude Code container orchestrator |
@@ -28,7 +28,7 @@ brew tap samoht/monopam
 
 ```bash
 # Install pre-built binaries
-brew install merlint prune irmin crow agent mdns-query uniboot git-mono precommit bottler monopam
+brew install merlint pruner irmin crow agent mdns-query uniboot git-mono precommit bottler monopam
 
 # Or build from source
 brew install --HEAD merlint
