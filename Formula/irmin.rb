@@ -7,7 +7,7 @@ class Irmin < Formula
   on_macos do
     on_arm do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/irmin-20260206.arm64_sonoma.bottle.tar.gz"
-      sha256 "0122260e45def0588d41b1464c3fb00cfb73cc64d0659a2106f0b172e63be9c8"
+      sha256 "e6cb01dc92371a246636aff0500758f152336a5d1a4e30411627af2be8b0e91d"
     end
     on_intel do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/irmin-latest.sonoma.bottle.tar.gz"

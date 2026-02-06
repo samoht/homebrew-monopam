@@ -7,7 +7,7 @@ class Crow < Formula
   on_macos do
     on_arm do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/crow-20260206.arm64_sonoma.bottle.tar.gz"
-      sha256 "3e015122fbe37613e645f91225e16a5c59518ab4283d1775853430e26084005e"
+      sha256 "df89544491d01c1e286d2413dfb3ba7b73b8fb849ef8f594c491a1eb7ca23928"
     end
     on_intel do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/crow-latest.sonoma.bottle.tar.gz"
