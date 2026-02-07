@@ -7,7 +7,7 @@ class Uniboot < Formula
   on_macos do
     on_arm do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/uniboot-20260206.arm64_sonoma.bottle.tar.gz"
-      sha256 "16e611be68bbb056535cc133dee3af21143de2e91aacbe71aa9bbe98d8b86ce9"
+      sha256 "a383bd23bd38ae94c4c1d8b1e49145537b583d8394ea0dcda68e7de841568912"
     end
     on_intel do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/uniboot-latest.sonoma.bottle.tar.gz"
