@@ -27,10 +27,10 @@ jobs:
     strategy:
       matrix:
         include:
-          - os: macos-14
-            platform: arm64_sonoma
-          - os: macos-13
-            platform: x86_64_ventura
+          - os: macos-15
+            platform: arm64_sequoia
+          - os: macos-15-large
+            platform: x86_64_sequoia
           - os: ubuntu-latest
             platform: x86_64_linux
     runs-on: ${{ matrix.os }}
