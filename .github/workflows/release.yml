@@ -1,0 +1,132 @@
+name: Release Bottles
+
+on:
+  workflow_dispatch:
+    inputs:
+      binary:
+        description: 'Binary to release (merlint, pruner, irmin, crow, agent, mdns-query, uniboot, git-mono, precommit, bottler, monopam)'
+        required: true
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - merlint
+          - pruner
+          - irmin
+          - crow
+          - agent
+          - mdns-query
+          - uniboot
+          - git-mono
+          - precommit
+          - bottler
+          - monopam
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        include:
+          - os: macos-14
+            platform: arm64_sonoma
+          - os: macos-13
+            platform: x86_64_ventura
+          - os: ubuntu-latest
+            platform: x86_64_linux
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout monorepo
+        run: git clone --depth 1 https://tangled.org/gazagnaire.org/ocaml-git.git mono
+
+      - name: Install OCaml (macOS)
+        if: runner.os == 'macOS'
+        run: brew install ocaml dune pkg-config gmp libffi
+
+      - name: Install OCaml (Linux)
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ocaml dune libgmp-dev libffi-dev pkg-config
+
+      - name: Generate lockfile
+        working-directory: mono
+        run: dune pkg lock
+
+      - name: Build bottler
+        working-directory: mono
+        run: dune build --release ocaml-homebrew/bin/main.exe
+
+      - name: Build bottles
+        working-directory: mono
+        run: |
+          if [ "${{ inputs.binary }}" = "all" ]; then
+            dune exec -- bottler build
+          else
+            dune exec -- bottler build ${{ inputs.binary }}
+          fi
+
+      - name: Upload bottles to storage
+        working-directory: mono
+        run: |
+          if [ "${{ inputs.binary }}" = "all" ]; then
+            dune exec -- bottler upload
+          else
+            dune exec -- bottler upload ${{ inputs.binary }}
+          fi
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.SCW_ACCESS_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.SCW_SECRET_KEY }}
+
+      - name: Save checksums
+        uses: actions/upload-artifact@v4
+        with:
+          name: checksums-${{ matrix.platform }}
+          path: mono/*.sha256
+
+  update-tap:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download checksums
+        uses: actions/download-artifact@v4
+        with:
+          path: checksums
+
+      - name: Checkout monorepo
+        run: git clone --depth 1 https://tangled.org/gazagnaire.org/ocaml-git.git mono
+
+      - name: Install OCaml
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ocaml dune
+
+      - name: Generate lockfile
+        working-directory: mono
+        run: dune pkg lock
+
+      - name: Build bottler
+        working-directory: mono
+        run: dune build --release ocaml-homebrew/bin/main.exe
+
+      - name: Update formulas with checksums
+        run: |
+          mkdir -p Formula
+          cat checksums/*/*.sha256 > all-checksums.txt
+          cd mono
+          if [ "${{ inputs.binary }}" = "all" ]; then
+            for name in merlint pruner irmin crow agent mdns-query uniboot git-mono precommit bottler monopam; do
+              dune exec -- bottler formula "$name" > ../Formula/"$name".rb
+            done
+          else
+            dune exec -- bottler formula ${{ inputs.binary }} > ../Formula/${{ inputs.binary }}.rb
+          fi
+
+      - name: Commit and push
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add Formula/
+          git diff --staged --quiet || git commit -m "Update bottles for ${{ inputs.binary }}"
+          git push
