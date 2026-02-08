@@ -2,12 +2,12 @@ class Pruner < Formula
   desc "Dead code remover for OCaml .mli files"
   homepage "https://tangled.org/gazagnaire.org/prune"
   license "ISC"
-  version "20260207"
+  version "20260208"
 
   on_macos do
     on_arm do
-      url "https://homebrew-bottles.s3.fr-par.scw.cloud/pruner-20260207.arm64_sonoma.bottle.tar.gz"
-      sha256 "ee63e8800220911cf31abe40b24726140534d902ee6eb45544c4c595c61ee08f"
+      url "https://homebrew-bottles.s3.fr-par.scw.cloud/pruner-20260208.arm64_sonoma.bottle.tar.gz"
+      sha256 "ff940c57bff1dd7b2c761367161f86aa542fc18d6ad0b980a1ab8e06252e4d09"
     end
     on_intel do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/pruner-latest.sonoma.bottle.tar.gz"
