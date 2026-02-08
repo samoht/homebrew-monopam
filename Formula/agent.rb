@@ -7,7 +7,7 @@ class Agent < Formula
   on_macos do
     on_arm do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/agent-20260208.arm64_sonoma.bottle.tar.gz"
-      sha256 "d8597dd29b0706f706ab5ce3517c118e5a14a469c5197b75d78364e15a7248a9"
+      sha256 "37729fd4e95c18fe3a78e3e2a876334bbc1c2279d8ee44370afc342f84a40712"
     end
     on_intel do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/agent-latest.sonoma.bottle.tar.gz"

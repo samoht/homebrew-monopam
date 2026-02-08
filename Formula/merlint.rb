@@ -7,7 +7,7 @@ class Merlint < Formula
   on_macos do
     on_arm do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/merlint-20260208.arm64_sonoma.bottle.tar.gz"
-      sha256 "baa03b84b0198b8e29df543245760601e59f14426e96475fed8a037e1f33c930"
+      sha256 "bd4f2e5696cf3794e911f7191fef7d61e9562a5eb239d9de7376afa5872584eb"
     end
     on_intel do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/merlint-latest.sonoma.bottle.tar.gz"
