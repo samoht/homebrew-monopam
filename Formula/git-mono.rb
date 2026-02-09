@@ -7,7 +7,7 @@ class GitMono < Formula
   on_macos do
     on_arm do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/git-mono-20260208.arm64_sonoma.bottle.tar.gz"
-      sha256 "62652de5db5bc46b77251bf68446a26dc3ce102e3deafa7eb5e51481c247ba01"
+      sha256 "39d1e115d25c3a5df80c29aa14a7f0cb316ea862071e9d4352a0a3c3e73af19e"
     end
     on_intel do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/git-mono-latest.sonoma.bottle.tar.gz"
