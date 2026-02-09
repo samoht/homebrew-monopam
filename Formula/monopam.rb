@@ -7,7 +7,7 @@ class Monopam < Formula
   on_macos do
     on_arm do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/monopam-20260208.arm64_sonoma.bottle.tar.gz"
-      sha256 "7b1a2cebf1cf16cd77cfc44cabb4020745e6f21f5520653b17b738b802d6765e"
+      sha256 "96e651e96940e65e3ec31ad91f31b4c1481e2569cf12dfa7fa66e0c7e89affe6"
     end
     on_intel do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/monopam-latest.sonoma.bottle.tar.gz"
