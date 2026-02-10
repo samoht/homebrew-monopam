@@ -7,7 +7,7 @@ class MdnsQuery < Formula
   on_macos do
     on_arm do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/mdns-query-20260209.arm64_sonoma.bottle.tar.gz"
-      sha256 "9302fc2853e6a3cb1b7adaed206e5ed528fa1c3ebc4c93d76cc355e0e5f71712"
+      sha256 "d229b0a570985957438f8aeb6a070b724ec154685ef9a3ee205552c7a573e8f9"
     end
     on_intel do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/mdns-query-latest.sonoma.bottle.tar.gz"
