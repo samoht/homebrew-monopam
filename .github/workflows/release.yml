@@ -52,8 +52,7 @@ jobs:
           opam init --disable-sandboxing --no-setup -y
 
       - name: Install dependencies
-        working-directory: mono
-        run: opam install . --deps-only -y
+        run: opam install dune bos cmdliner fmt logs fpath digestif astring -y
 
       - name: Build bottler
         working-directory: mono
@@ -110,8 +109,7 @@ jobs:
           opam init --disable-sandboxing --no-setup -y
 
       - name: Install dependencies
-        working-directory: mono
-        run: opam install . --deps-only -y
+        run: opam install dune bos cmdliner fmt logs fpath digestif astring -y
 
       - name: Build bottler
         working-directory: mono
