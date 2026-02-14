@@ -38,31 +38,37 @@ jobs:
 
       - name: Install OCaml (macOS)
         if: runner.os == 'macOS'
-        run: brew install ocaml dune pkg-config gmp libffi
+        run: |
+          set -eo pipefail
+          brew install opam pkg-config gmp libffi
+          opam init --disable-sandboxing --no-setup -y
+          opam install dune -y
 
       - name: Install OCaml (Linux)
         if: runner.os == 'Linux'
         run: |
           set -eo pipefail
           sudo apt-get update
-          sudo apt-get install -y ocaml ocaml-dune libgmp-dev libffi-dev pkg-config
+          sudo apt-get install -y opam libgmp-dev libffi-dev pkg-config
+          opam init --disable-sandboxing --no-setup -y
+          opam install dune -y
 
       - name: Generate lockfile
         working-directory: mono
-        run: dune pkg lock
+        run: opam exec -- dune pkg lock
 
       - name: Build bottler
         working-directory: mono
-        run: dune build --release ocaml-homebrew/bin/main.exe
+        run: opam exec -- dune build --release ocaml-homebrew/bin/main.exe
 
       - name: Build bottles
         working-directory: mono
         run: |
           set -eo pipefail
           if [ "${{ inputs.binary }}" = "all" ]; then
-            dune exec -- bottler build
+            opam exec -- dune exec -- bottler build
           else
-            dune exec -- bottler build "${{ inputs.binary }}"
+            opam exec -- dune exec -- bottler build "${{ inputs.binary }}"
           fi
 
       - name: Upload bottles to storage
@@ -70,9 +76,9 @@ jobs:
         run: |
           set -eo pipefail
           if [ "${{ inputs.binary }}" = "all" ]; then
-            dune exec -- bottler upload
+            opam exec -- dune exec -- bottler upload
           else
-            dune exec -- bottler upload "${{ inputs.binary }}"
+            opam exec -- dune exec -- bottler upload "${{ inputs.binary }}"
           fi
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.SCW_ACCESS_KEY }}
@@ -102,15 +108,17 @@ jobs:
         run: |
           set -eo pipefail
           sudo apt-get update
-          sudo apt-get install -y ocaml ocaml-dune
+          sudo apt-get install -y opam libgmp-dev libffi-dev pkg-config
+          opam init --disable-sandboxing --no-setup -y
+          opam install dune -y
 
       - name: Generate lockfile
         working-directory: mono
-        run: dune pkg lock
+        run: opam exec -- dune pkg lock
 
       - name: Build bottler
         working-directory: mono
-        run: dune build --release ocaml-homebrew/bin/main.exe
+        run: opam exec -- dune build --release ocaml-homebrew/bin/main.exe
 
       - name: Update formulas with checksums
         run: |
@@ -119,10 +127,10 @@ jobs:
           cd mono
           if [ "${{ inputs.binary }}" = "all" ]; then
             for name in merlint prune irmin crow agent mdns-query uniboot git-mono precommit bottler monopam; do
-              dune exec -- bottler formula "$name" > ../Formula/"$name".rb
+              opam exec -- dune exec -- bottler formula "$name" > ../Formula/"$name".rb
             done
           else
-            dune exec -- bottler formula "${{ inputs.binary }}" > "../Formula/${{ inputs.binary }}.rb"
+            opam exec -- dune exec -- bottler formula "${{ inputs.binary }}" > "../Formula/${{ inputs.binary }}.rb"
           fi
 
       - name: Commit and push
