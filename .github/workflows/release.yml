@@ -4,14 +4,14 @@ on:
   workflow_dispatch:
     inputs:
       binary:
-        description: 'Binary to release (merlint, pruner, irmin, crow, agent, mdns-query, uniboot, git-mono, precommit, bottler, monopam)'
+        description: 'Binary to release (merlint, prune, irmin, crow, agent, mdns-query, uniboot, git-mono, precommit, bottler, monopam)'
         required: true
         default: 'all'
         type: choice
         options:
           - all
           - merlint
-          - pruner
+          - prune
           - irmin
           - crow
           - agent
@@ -43,8 +43,9 @@ jobs:
       - name: Install OCaml (Linux)
         if: runner.os == 'Linux'
         run: |
+          set -eo pipefail
           sudo apt-get update
-          sudo apt-get install -y ocaml dune libgmp-dev libffi-dev pkg-config
+          sudo apt-get install -y ocaml ocaml-dune libgmp-dev libffi-dev pkg-config
 
       - name: Generate lockfile
         working-directory: mono
@@ -57,19 +58,21 @@ jobs:
       - name: Build bottles
         working-directory: mono
         run: |
+          set -eo pipefail
           if [ "${{ inputs.binary }}" = "all" ]; then
             dune exec -- bottler build
           else
-            dune exec -- bottler build ${{ inputs.binary }}
+            dune exec -- bottler build "${{ inputs.binary }}"
           fi
 
       - name: Upload bottles to storage
         working-directory: mono
         run: |
+          set -eo pipefail
           if [ "${{ inputs.binary }}" = "all" ]; then
             dune exec -- bottler upload
           else
-            dune exec -- bottler upload ${{ inputs.binary }}
+            dune exec -- bottler upload "${{ inputs.binary }}"
           fi
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.SCW_ACCESS_KEY }}
@@ -97,8 +100,9 @@ jobs:
 
       - name: Install OCaml
         run: |
+          set -eo pipefail
           sudo apt-get update
-          sudo apt-get install -y ocaml dune
+          sudo apt-get install -y ocaml ocaml-dune
 
       - name: Generate lockfile
         working-directory: mono
@@ -110,21 +114,22 @@ jobs:
 
       - name: Update formulas with checksums
         run: |
+          set -eo pipefail
           mkdir -p Formula
-          cat checksums/*/*.sha256 > all-checksums.txt
           cd mono
           if [ "${{ inputs.binary }}" = "all" ]; then
-            for name in merlint pruner irmin crow agent mdns-query uniboot git-mono precommit bottler monopam; do
+            for name in merlint prune irmin crow agent mdns-query uniboot git-mono precommit bottler monopam; do
               dune exec -- bottler formula "$name" > ../Formula/"$name".rb
             done
           else
-            dune exec -- bottler formula ${{ inputs.binary }} > ../Formula/${{ inputs.binary }}.rb
+            dune exec -- bottler formula "${{ inputs.binary }}" > "../Formula/${{ inputs.binary }}.rb"
           fi
 
       - name: Commit and push
         run: |
+          set -eo pipefail
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
           git add Formula/
           git diff --staged --quiet || git commit -m "Update bottles for ${{ inputs.binary }}"
-          git push
+          git push origin HEAD
