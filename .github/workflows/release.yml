@@ -42,7 +42,6 @@ jobs:
           set -eo pipefail
           brew install opam pkg-config gmp libffi
           opam init --disable-sandboxing --no-setup -y
-          opam install dune -y
 
       - name: Install OCaml (Linux)
         if: runner.os == 'Linux'
@@ -51,11 +50,10 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y opam libgmp-dev libffi-dev pkg-config
           opam init --disable-sandboxing --no-setup -y
-          opam install dune -y
 
-      - name: Generate lockfile
+      - name: Install dependencies
         working-directory: mono
-        run: opam exec -- dune pkg lock
+        run: opam install . --deps-only -y
 
       - name: Build bottler
         working-directory: mono
@@ -110,11 +108,10 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y opam libgmp-dev libffi-dev pkg-config
           opam init --disable-sandboxing --no-setup -y
-          opam install dune -y
 
-      - name: Generate lockfile
+      - name: Install dependencies
         working-directory: mono
-        run: opam exec -- dune pkg lock
+        run: opam install . --deps-only -y
 
       - name: Build bottler
         working-directory: mono
