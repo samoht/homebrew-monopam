@@ -23,12 +23,13 @@ brew tap samoht/monopam
 | `precommit` | Pre-commit hook manager for OCaml projects |
 | `bottler` | Homebrew bottle builder and tap manager |
 | `monopam` | OCaml monorepo manager with git subtrees |
+| `slack` | Slack API command-line client |
 
 ## Usage
 
 ```bash
 # Install pre-built binaries
-brew install merlint prune irmin crow agent mdns-query uniboot git-mono precommit bottler monopam
+brew install merlint prune irmin crow agent mdns-query uniboot git-mono precommit bottler monopam slack
 
 # Or build from source
 brew install --HEAD merlint
