@@ -26,12 +26,13 @@ brew tap samoht/monopam
 | `slack` | Slack API command-line client |
 | `space` | SpaceOS CLI — build and boot SpaceOS VMs |
 | `space-ground` | SpaceOS ground station with live web dashboard |
+| `space-test` | SpaceOS E2E test harness |
 
 ## Usage
 
 ```bash
 # Install pre-built binaries
-brew install merlint prune irmin crow agent mdns-query uniboot git-mono precommit bottler monopam slack space space-ground
+brew install merlint prune irmin crow agent mdns-query uniboot git-mono precommit bottler monopam slack space space-ground space-test
 
 # Or build from source
 brew install --HEAD merlint
