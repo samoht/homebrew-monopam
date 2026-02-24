@@ -24,12 +24,14 @@ brew tap samoht/monopam
 | `bottler` | Homebrew bottle builder and tap manager |
 | `monopam` | OCaml monorepo manager with git subtrees |
 | `slack` | Slack API command-line client |
+| `space` | SpaceOS CLI — build and boot SpaceOS VMs |
+| `space-ground` | SpaceOS ground station with live web dashboard |
 
 ## Usage
 
 ```bash
 # Install pre-built binaries
-brew install merlint prune irmin crow agent mdns-query uniboot git-mono precommit bottler monopam slack
+brew install merlint prune irmin crow agent mdns-query uniboot git-mono precommit bottler monopam slack space space-ground
 
 # Or build from source
 brew install --HEAD merlint

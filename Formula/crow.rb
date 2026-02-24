@@ -2,12 +2,12 @@ class Crow < Formula
   desc "Crowbar campaign orchestrator for AFL fuzzing"
   homepage "https://tangled.org/gazagnaire.org/ocaml-crow"
   license "ISC"
-  version "20260220"
+  version "20260223"
 
   on_macos do
     on_arm do
-      url "https://homebrew-bottles.s3.fr-par.scw.cloud/crow-20260220.arm64_sonoma.bottle.tar.gz"
-      sha256 "91356477a1caf561991d0d92ae12c8f41067d87a96cf470a52e5bc2a5a7b9812"
+      url "https://homebrew-bottles.s3.fr-par.scw.cloud/crow-20260223.arm64_sonoma.bottle.tar.gz"
+      sha256 "b7c3eedf414009b51e2bf866ba8e6fa03ea180740f0b61348fc71cddf80d3a0f"
     end
     on_intel do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/crow-latest.sonoma.bottle.tar.gz"
