@@ -27,12 +27,17 @@ brew tap samoht/monopam
 | `space` | SpaceOS CLI — build and boot SpaceOS VMs |
 | `space-ground` | SpaceOS ground station with live web dashboard |
 | `space-test` | SpaceOS E2E test harness |
+| `linkedin` | LinkedIn CLI for profiles, posts, and cookies |
+| `dupfind` | Find cross-package duplicate code |
+| `meross` | Meross smart plug control and monitoring |
+| `skills` | Claude Code skills manager |
+| `matter` | Matter smart home device discovery and control |
 
 ## Usage
 
 ```bash
 # Install pre-built binaries
-brew install merlint prune irmin crow agent mdns-query uniboot git-mono precommit bottler monopam slack space space-ground space-test
+brew install merlint prune irmin crow agent mdns-query uniboot git-mono precommit bottler monopam slack space space-ground space-test linkedin dupfind meross skills matter
 
 # Or build from source
 brew install --HEAD merlint
