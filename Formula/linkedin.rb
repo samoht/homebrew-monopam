@@ -2,12 +2,12 @@ class Linkedin < Formula
   desc "LinkedIn CLI for profiles, posts, and cookies"
   homepage "https://tangled.org/gazagnaire.org/linkedin"
   license "ISC"
-  version "20260310"
+  version "20260315"
 
   on_macos do
     on_arm do
-      url "https://homebrew-bottles.s3.fr-par.scw.cloud/linkedin-20260310.arm64_sonoma.bottle.tar.gz"
-      sha256 "d07750372c9a74ef31b2353b7db7e0116c68f9dcd3e056b5a42fea74f7d18a50"
+      url "https://homebrew-bottles.s3.fr-par.scw.cloud/linkedin-20260315.arm64_sonoma.bottle.tar.gz"
+      sha256 "4c85a365ef6aa61dbac81cfcb2b82d62cc98d65ea970a875da2f6d449d5cefe7"
     end
     on_intel do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/linkedin-latest.sonoma.bottle.tar.gz"

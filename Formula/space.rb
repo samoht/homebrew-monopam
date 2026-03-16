@@ -2,12 +2,12 @@ class Space < Formula
   desc "SpaceOS CLI — build and boot SpaceOS VMs"
   homepage "https://tangled.org/gazagnaire.org/space"
   license "ISC"
-  version "20260310"
+  version "20260315"
 
   on_macos do
     on_arm do
-      url "https://homebrew-bottles.s3.fr-par.scw.cloud/space-20260310.arm64_sonoma.bottle.tar.gz"
-      sha256 "f72bc947ddd70847fdc3335eea83d9cc057b761c20e1137b3e12cdc8885013d1"
+      url "https://homebrew-bottles.s3.fr-par.scw.cloud/space-20260315.arm64_sonoma.bottle.tar.gz"
+      sha256 "d3e2f303e5e216bea88bf68ba223531e0b5e7b0edc9e4bc8d3f96f6399f65dbe"
     end
     on_intel do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/space-latest.sonoma.bottle.tar.gz"
