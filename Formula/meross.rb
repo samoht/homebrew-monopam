@@ -2,12 +2,12 @@ class Meross < Formula
   desc "Meross smart plug control and monitoring"
   homepage "https://tangled.org/gazagnaire.org/meross"
   license "ISC"
-  version "20260315"
+  version "20260319"
 
   on_macos do
     on_arm do
-      url "https://homebrew-bottles.s3.fr-par.scw.cloud/meross-20260315.arm64_sonoma.bottle.tar.gz"
-      sha256 "1fd4cb584c3a2fba5684ce3d1cd370e10c18edf5cadd3746968ce3274fffdff4"
+      url "https://homebrew-bottles.s3.fr-par.scw.cloud/meross-20260319.arm64_sonoma.bottle.tar.gz"
+      sha256 "5ebc7140f754d69e978d528b50905a61e31abe43921685ac19d3ff19eeb0515b"
     end
     on_intel do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/meross-latest.sonoma.bottle.tar.gz"

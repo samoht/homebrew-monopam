@@ -2,12 +2,12 @@ class SpaceTest < Formula
   desc "SpaceOS E2E test harness"
   homepage "https://tangled.org/gazagnaire.org/space-test"
   license "ISC"
-  version "20260315"
+  version "20260319"
 
   on_macos do
     on_arm do
-      url "https://homebrew-bottles.s3.fr-par.scw.cloud/space-test-20260315.arm64_sonoma.bottle.tar.gz"
-      sha256 "1b600c0cd8713716050c78b2501af24e0d1f9f8c5cb48521ba0a5adfb6b82492"
+      url "https://homebrew-bottles.s3.fr-par.scw.cloud/space-test-20260319.arm64_sonoma.bottle.tar.gz"
+      sha256 "c39c64053b92777116e7e29e25d4b168955ce2eaf1023faec7bb251c088f9ca3"
     end
     on_intel do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/space-test-latest.sonoma.bottle.tar.gz"

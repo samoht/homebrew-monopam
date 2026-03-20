@@ -2,12 +2,12 @@ class Matter < Formula
   desc "Matter smart home device discovery and control"
   homepage "https://tangled.org/gazagnaire.org/matter"
   license "ISC"
-  version "20260315"
+  version "20260319"
 
   on_macos do
     on_arm do
-      url "https://homebrew-bottles.s3.fr-par.scw.cloud/matter-20260315.arm64_sonoma.bottle.tar.gz"
-      sha256 "53d140951c9f94a304bf6384fa76ca9252e8f90cc5e27ea8c5fc0c7cbde72c89"
+      url "https://homebrew-bottles.s3.fr-par.scw.cloud/matter-20260319.arm64_sonoma.bottle.tar.gz"
+      sha256 "992899aa1a620f720355667edcc05b94556769efe7fd4e6179807ea1288d2057"
     end
     on_intel do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/matter-latest.sonoma.bottle.tar.gz"
