@@ -2,12 +2,12 @@ class Bottler < Formula
   desc "Homebrew bottle builder and tap manager"
   homepage "https://tangled.org/gazagnaire.org/ocaml-homebrew"
   license "ISC"
-  version "20260319"
+  version "20260404-1ccd99f"
 
   on_macos do
     on_arm do
-      url "https://homebrew-bottles.s3.fr-par.scw.cloud/bottler-20260319.arm64_sonoma.bottle.tar.gz"
-      sha256 "81988e3059bf554fc986a7a1077f95c198b686f3c0c4a6227ae5bc9eb93410b3"
+      url "https://homebrew-bottles.s3.fr-par.scw.cloud/bottler-20260404-1ccd99f.arm64_sonoma.bottle.tar.gz"
+      sha256 "f65b83647d503abc92eb453c943b176090a372f31fd2108a7401a1a246123138"
     end
     on_intel do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/bottler-latest.sonoma.bottle.tar.gz"
