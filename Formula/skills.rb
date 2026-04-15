@@ -2,12 +2,12 @@ class Skills < Formula
   desc "Claude Code skills manager"
   homepage "https://tangled.org/gazagnaire.org/skills"
   license "ISC"
-  version "20260404-1ccd99f"
+  version "20260415-259056f"
 
   on_macos do
     on_arm do
-      url "https://homebrew-bottles.s3.fr-par.scw.cloud/skills-20260404-1ccd99f.arm64_sonoma.bottle.tar.gz"
-      sha256 "eb1d2f77f01e3b838096a89c68e1ca3edffa95643388d766779f63b61bb9d106"
+      url "https://homebrew-bottles.s3.fr-par.scw.cloud/skills-20260415-259056f.arm64_sonoma.bottle.tar.gz"
+      sha256 "f38a0b3003a60da6d96108036e5c97be86df29b321d5e3886d55e263f1e40bd9"
     end
     on_intel do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/skills-latest.sonoma.bottle.tar.gz"

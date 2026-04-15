@@ -2,12 +2,12 @@ class SpaceGround < Formula
   desc "SpaceOS ground station with live web dashboard"
   homepage "https://tangled.org/gazagnaire.org/space-ground"
   license "ISC"
-  version "20260404-1ccd99f"
+  version "20260415-259056f"
 
   on_macos do
     on_arm do
-      url "https://homebrew-bottles.s3.fr-par.scw.cloud/space-ground-20260404-1ccd99f.arm64_sonoma.bottle.tar.gz"
-      sha256 "d439dfe55354d4084056fc83e5f3a244d2f2dcd6c1fc0b26cae172cfb4686a8d"
+      url "https://homebrew-bottles.s3.fr-par.scw.cloud/space-ground-20260415-259056f.arm64_sonoma.bottle.tar.gz"
+      sha256 "29c4d8d3e57dc0cd98da712dcb94d61e9dbcd7d83bc70b05042f9288c69b5391"
     end
     on_intel do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/space-ground-latest.sonoma.bottle.tar.gz"
