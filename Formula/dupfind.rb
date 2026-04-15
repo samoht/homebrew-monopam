@@ -2,12 +2,12 @@ class Dupfind < Formula
   desc "Find cross-package duplicate code"
   homepage "https://tangled.org/gazagnaire.org/dupfind"
   license "ISC"
-  version "20260415-259056f"
+  version "20260415-ec0116d"
 
   on_macos do
     on_arm do
-      url "https://homebrew-bottles.s3.fr-par.scw.cloud/dupfind-20260415-259056f.arm64_sonoma.bottle.tar.gz"
-      sha256 "b6cb7bbe1b2668f986fa65f8734f380608a3b8b3d864495a11cc4e6dfbf09b13"
+      url "https://homebrew-bottles.s3.fr-par.scw.cloud/dupfind-20260415-ec0116d.arm64_sonoma.bottle.tar.gz"
+      sha256 "0204ffc871a1ff1567ac33f68f21ffd7f8bfa1d3f1b940f09d6c236a546d20cf"
     end
     on_intel do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/dupfind-latest.sonoma.bottle.tar.gz"

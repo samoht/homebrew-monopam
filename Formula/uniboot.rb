@@ -2,12 +2,12 @@ class Uniboot < Formula
   desc "Bootable disk image builder with GPT partition tables"
   homepage "https://tangled.org/gazagnaire.org/uniboot"
   license "ISC"
-  version "20260415-259056f"
+  version "20260415-ec0116d"
 
   on_macos do
     on_arm do
-      url "https://homebrew-bottles.s3.fr-par.scw.cloud/uniboot-20260415-259056f.arm64_sonoma.bottle.tar.gz"
-      sha256 "701026ed1b960c20662eaac5bce3dfd335a35a9b01120e97fe1ba0cd4eb0c5fd"
+      url "https://homebrew-bottles.s3.fr-par.scw.cloud/uniboot-20260415-ec0116d.arm64_sonoma.bottle.tar.gz"
+      sha256 "b77eddefde1a55dc9519b0b58e754fd83da1fe434b9fcf04488febb79a8b074c"
     end
     on_intel do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/uniboot-latest.sonoma.bottle.tar.gz"
