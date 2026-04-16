@@ -2,12 +2,12 @@ class GitMono < Formula
   desc "Pure OCaml git subtree split"
   homepage "https://tangled.org/gazagnaire.org/ocaml-git"
   license "ISC"
-  version "20260415-ec0116d"
+  version "20260415-1d4ee03"
 
   on_macos do
     on_arm do
-      url "https://homebrew-bottles.s3.fr-par.scw.cloud/git-mono-20260415-ec0116d.arm64_sonoma.bottle.tar.gz"
-      sha256 "98d2e5b3c32926fb9eb1fe26a45cbb8821c303f94f97aaf9aef121a900480595"
+      url "https://homebrew-bottles.s3.fr-par.scw.cloud/git-mono-20260415-1d4ee03.arm64_sonoma.bottle.tar.gz"
+      sha256 "6a5c369f4d3571be97c7865d2ad39fabe87a6e29d41b6f67e2c10330e65b1d62"
     end
     on_intel do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/git-mono-latest.sonoma.bottle.tar.gz"

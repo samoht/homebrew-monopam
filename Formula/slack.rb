@@ -2,12 +2,12 @@ class Slack < Formula
   desc "Slack API command-line client"
   homepage "https://tangled.org/gazagnaire.org/slack"
   license "ISC"
-  version "20260415-ec0116d"
+  version "20260415-1d4ee03"
 
   on_macos do
     on_arm do
-      url "https://homebrew-bottles.s3.fr-par.scw.cloud/slack-20260415-ec0116d.arm64_sonoma.bottle.tar.gz"
-      sha256 "d1b3a1126c4a0d55eaa4cc0c563585cc938ca1a26658a7864eb65aa22d1c1efe"
+      url "https://homebrew-bottles.s3.fr-par.scw.cloud/slack-20260415-1d4ee03.arm64_sonoma.bottle.tar.gz"
+      sha256 "94f59cce9d6c46dfbb8c0c36417916eee108db5ee688940b9430ccf3a46d86ae"
     end
     on_intel do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/slack-latest.sonoma.bottle.tar.gz"

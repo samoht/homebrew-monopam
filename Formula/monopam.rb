@@ -2,12 +2,12 @@ class Monopam < Formula
   desc "OCaml monorepo manager with git subtrees"
   homepage "https://tangled.org/gazagnaire.org/monopam"
   license "ISC"
-  version "20260415-ec0116d"
+  version "20260415-1d4ee03"
 
   on_macos do
     on_arm do
-      url "https://homebrew-bottles.s3.fr-par.scw.cloud/monopam-20260415-ec0116d.arm64_sonoma.bottle.tar.gz"
-      sha256 "5c034868d44f51e20e79485bcb430c6df7e498f140c7f7e6a945d23894641b69"
+      url "https://homebrew-bottles.s3.fr-par.scw.cloud/monopam-20260415-1d4ee03.arm64_sonoma.bottle.tar.gz"
+      sha256 "933bd83d228bf64f917c9fa87927ccb93b14f17bf765e0717efd42534ab7ab6c"
     end
     on_intel do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/monopam-latest.sonoma.bottle.tar.gz"
