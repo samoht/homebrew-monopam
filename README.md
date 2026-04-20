@@ -19,7 +19,7 @@ brew tap samoht/monopam
 | `agent` | Claude Code container orchestrator |
 | `mdns-query` | mDNS service discovery query tool |
 | `uniboot` | Bootable disk image builder |
-| `git-mono` | Pure OCaml git subtree split |
+| `git-x` | Fast git operations on the object DB (no checkout) |
 | `precommit` | Pre-commit hook manager for OCaml projects |
 | `bottler` | Homebrew bottle builder and tap manager |
 | `monopam` | OCaml monorepo manager with git subtrees |
@@ -34,7 +34,7 @@ brew tap samoht/monopam
 
 ```bash
 # Install pre-built binaries
-brew install merlint prune irmin crow agent mdns-query uniboot git-mono precommit bottler monopam slack linkedin dupfind meross skills matter
+brew install merlint prune irmin crow agent mdns-query uniboot git-x precommit bottler monopam slack linkedin dupfind meross skills matter
 
 # Or build from source
 brew install --HEAD merlint
