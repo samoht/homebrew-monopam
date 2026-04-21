@@ -2,12 +2,12 @@ class GitX < Formula
   desc "Fast git operations on the object DB (no checkout)"
   homepage "https://tangled.org/gazagnaire.org/git-x"
   license "ISC"
-  version "20260420-74a4f4b"
+  version "20260421-5c63c02"
 
   on_macos do
     on_arm do
-      url "https://homebrew-bottles.s3.fr-par.scw.cloud/git-x/arm64_sonoma/20260420-74a4f4b.bottle.tar.gz"
-      sha256 "ad39567fb207b42288c786e473bd1174decf4173a54582ef91baafba0d61f38d"
+      url "https://homebrew-bottles.s3.fr-par.scw.cloud/git-x/arm64_sonoma/20260421-5c63c02.bottle.tar.gz"
+      sha256 "66bc6ba3aebae6d90d2a34362e5e42448876ffe2131de809cec89b5f629f413f"
     end
     on_intel do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/git-x/sonoma/latest.bottle.tar.gz"
