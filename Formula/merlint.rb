@@ -2,12 +2,12 @@ class Merlint < Formula
   desc "Opinionated OCaml linter powered by Merlin"
   homepage "https://tangled.org/gazagnaire.org/merlint"
   license "ISC"
-  version "20260421-01cf29f"
+  version "20260421-unknown"
 
   on_macos do
     on_arm do
-      url "https://homebrew-bottles.s3.fr-par.scw.cloud/merlint/arm64_sonoma/20260421-01cf29f.bottle.tar.gz"
-      sha256 "bfa6848f90da7db33041cf10844264d2d578ceb77bb23fcef5df09d5381a899f"
+      url "https://homebrew-bottles.s3.fr-par.scw.cloud/merlint/arm64_sonoma/20260421-unknown.bottle.tar.gz"
+      sha256 "b1b113303998345582a6733ecf65fee83d2221a3a8196f8b9ee2475192b18309"
     end
     on_intel do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/merlint-latest.sonoma.bottle.tar.gz"
