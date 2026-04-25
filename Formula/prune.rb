@@ -2,12 +2,12 @@ class Prune < Formula
   desc "Find and remove unused exports in OCaml interface files"
   homepage "https://tangled.org/gazagnaire.org/prune"
   license "ISC"
-  version "20260421-unknown"
+  version "20260424-4aea2b3"
 
   on_macos do
     on_arm do
-      url "https://homebrew-bottles.s3.fr-par.scw.cloud/prune/arm64_sonoma/20260421-unknown.bottle.tar.gz"
-      sha256 "a6b753dbe26d804ed4ab7ffdbc2cce3f067ba758da17af77ef2cc531e4256f28"
+      url "https://homebrew-bottles.s3.fr-par.scw.cloud/prune/arm64_sonoma/20260424-4aea2b3.bottle.tar.gz"
+      sha256 "10d44fa1b64600c392ef9829aed592b28047f1ce1bec02e102f9533e5b7d10eb"
     end
     on_intel do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/prune-latest.sonoma.bottle.tar.gz"
