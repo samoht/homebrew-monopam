@@ -2,12 +2,12 @@ class Agent < Formula
   desc "Claude Code container orchestrator"
   homepage "https://tangled.org/gazagnaire.org/ocaml-agent"
   license "ISC"
-  version "20260507-6919ee5"
+  version "20260513-bdba8ba"
 
   on_macos do
     on_arm do
-      url "https://homebrew-bottles.s3.fr-par.scw.cloud/agent/arm64_sonoma/20260507-6919ee5.bottle.tar.gz"
-      sha256 "b268c5b275ebcad3f6e8636875e1336586d51ee71fa31f9c148cdca92b4f7a53"
+      url "https://homebrew-bottles.s3.fr-par.scw.cloud/agent/arm64_sonoma/20260513-bdba8ba.bottle.tar.gz"
+      sha256 "d4c9158daef1e1acb453fffbd6cb27b811974a46869c4e067f2af6de8989802d"
     end
     on_intel do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/agent-latest.sonoma.bottle.tar.gz"
