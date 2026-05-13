@@ -7,7 +7,7 @@ class Matter < Formula
   on_macos do
     on_arm do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/matter/arm64_sonoma/20260513-2fe05c6.bottle.tar.gz"
-      sha256 "ca5df37790ae00a9c1e864207efa8ce390765061526f4816227884a5fb3ceefd"
+      sha256 "7a0b05371707540b0132cffbbdbaeeb33721dcb22505ae59e4c32380ac5bcc95"
     end
     on_intel do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/matter-latest.sonoma.bottle.tar.gz"

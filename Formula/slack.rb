@@ -7,7 +7,7 @@ class Slack < Formula
   on_macos do
     on_arm do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/slack/arm64_sonoma/20260513-2fe05c6.bottle.tar.gz"
-      sha256 "d4b0858c223c387383ad0be98137aa8d3c74f05e2a50897794d77d97451b374e"
+      sha256 "c7deefb28a9f53751113a147e5d59c05c5df18aabe15ff5c275f480b68e77ae1"
     end
     on_intel do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/slack-latest.sonoma.bottle.tar.gz"
