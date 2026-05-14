@@ -2,12 +2,12 @@ class Precommit < Formula
   desc "Pre-commit hook manager for OCaml projects"
   homepage "https://tangled.org/gazagnaire.org/ocaml-precommit"
   license "ISC"
-  version "20260513-2fe05c6"
+  version "20260513-3e00f1a"
 
   on_macos do
     on_arm do
-      url "https://homebrew-bottles.s3.fr-par.scw.cloud/precommit/arm64_sonoma/20260513-2fe05c6.bottle.tar.gz"
-      sha256 "858ff336415e6983e4fad6d0b6c96c96c630cbaccffc30f898398b14a38d5975"
+      url "https://homebrew-bottles.s3.fr-par.scw.cloud/precommit/arm64_sonoma/20260513-3e00f1a.bottle.tar.gz"
+      sha256 "cdfcda1adce20aaae7bd3fccdd0c584d966e015095e163e28fc917b9fd7f61e6"
     end
     on_intel do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/precommit-latest.sonoma.bottle.tar.gz"

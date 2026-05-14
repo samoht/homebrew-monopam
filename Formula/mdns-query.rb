@@ -2,12 +2,12 @@ class MdnsQuery < Formula
   desc "mDNS service discovery query tool"
   homepage "https://tangled.org/gazagnaire.org/ocaml-mdns"
   license "ISC"
-  version "20260513-2fe05c6"
+  version "20260513-3e00f1a"
 
   on_macos do
     on_arm do
-      url "https://homebrew-bottles.s3.fr-par.scw.cloud/mdns-query/arm64_sonoma/20260513-2fe05c6.bottle.tar.gz"
-      sha256 "5d189d4eed2c540d7050420ca33be6d56f569878089650bef565cce9f4c6edd4"
+      url "https://homebrew-bottles.s3.fr-par.scw.cloud/mdns-query/arm64_sonoma/20260513-3e00f1a.bottle.tar.gz"
+      sha256 "b181f1b05d1b807a82984f6911efa46655ae51613c9f09fda595771d42df350c"
     end
     on_intel do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/mdns-query-latest.sonoma.bottle.tar.gz"
