@@ -7,7 +7,7 @@ class Meross < Formula
   on_macos do
     on_arm do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/meross/arm64_sonoma/20260521-489643a694d6cc53502f2af31b33e64e4a6c45a0.bottle.tar.gz"
-      sha256 "c981806c34920f3f60ebcd68104016b92b004966e9f1875ffc9ef8352dc4f381"
+      sha256 "030e304fd34b8f2199a2409136d1aee861bbcb81b503ed85cfd8459cf21667fe"
     end
     on_intel do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/meross-latest.sonoma.bottle.tar.gz"
