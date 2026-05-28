@@ -2,12 +2,12 @@ class Irmin < Formula
   desc "Content-addressable store with Git and ATProto MST support"
   homepage "https://tangled.org/gazagnaire.org/irmin"
   license "ISC"
-  version "20260522-76effcb3f05ae4805bf133dfdc71db98ba20b5fa"
+  version "20260527-cc1dd43a9b36ea415096c75363ab09a8033492cb+dirty"
 
   on_macos do
     on_arm do
-      url "https://homebrew-bottles.s3.fr-par.scw.cloud/irmin/arm64_sonoma/20260522-76effcb3f05ae4805bf133dfdc71db98ba20b5fa.bottle.tar.gz"
-      sha256 "9611c9714c68160660db43ff038a5e2973800e7ccf32dd3e768320804c088d36"
+      url "https://homebrew-bottles.s3.fr-par.scw.cloud/irmin/arm64_sonoma/20260527-cc1dd43a9b36ea415096c75363ab09a8033492cb+dirty.bottle.tar.gz"
+      sha256 "9acf4e4cf86871037581bcebfd636c18d6e1b493e1f49540cb85b67fb8d4f58f"
     end
     on_intel do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/irmin-latest.sonoma.bottle.tar.gz"
