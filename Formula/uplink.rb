@@ -7,7 +7,7 @@ class Uplink < Formula
   on_macos do
     on_arm do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/uplink/arm64_sonoma/20260710-0112caa9d8f66fe5354e20581a76c9730232e6ad+dirty.bottle.tar.gz"
-      sha256 "d5c09f66b61dbdc81f71c593fd4eae9789d17a2ecbaf9adc950b895e6ec781ef"
+      sha256 "3075c98f58bada3dc750b989588fbd3ce38b117e609d2a49e6386fc1df359abc"
     end
     on_intel do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/uplink/sonoma/latest.bottle.tar.gz"

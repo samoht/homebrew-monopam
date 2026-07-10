@@ -7,7 +7,7 @@ class GitX < Formula
   on_macos do
     on_arm do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/git-x/arm64_sonoma/20260710-0112caa9d8f66fe5354e20581a76c9730232e6ad+dirty.bottle.tar.gz"
-      sha256 "8f190f983ff0f57d04620a48bb00a5f6412820626fe8fc8f5e925a4d58d81b25"
+      sha256 "76f203fe71f6a1164ee26f6e3eddd3cc07f10088dd1bb9bdc462f1426173d136"
     end
     on_intel do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/git-x/sonoma/latest.bottle.tar.gz"

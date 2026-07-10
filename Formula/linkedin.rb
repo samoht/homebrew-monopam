@@ -7,7 +7,7 @@ class Linkedin < Formula
   on_macos do
     on_arm do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/linkedin/arm64_sonoma/20260710-0112caa9d8f66fe5354e20581a76c9730232e6ad+dirty.bottle.tar.gz"
-      sha256 "ba20e412bbd4869a4e9e2e5d9a01d4c01f08c4d14d4eb4b1b824852b9010263e"
+      sha256 "f4cef58af47b278f5a22eadedebb7c2b5fb17ced5e8fad7bb733571e1754bfdd"
     end
     on_intel do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/linkedin-latest.sonoma.bottle.tar.gz"
