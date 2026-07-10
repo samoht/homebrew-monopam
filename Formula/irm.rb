@@ -2,12 +2,12 @@ class Irm < Formula
   desc "Content-addressable store with Git support"
   homepage "https://tangled.org/gazagnaire.org/irm"
   license "ISC"
-  version "latest"
+  version "20260710-0112caa9d8f66fe5354e20581a76c9730232e6ad+dirty"
 
   on_macos do
     on_arm do
-      url "https://homebrew-bottles.s3.fr-par.scw.cloud/irm/arm64_sonoma/latest.bottle.tar.gz"
-      sha256 :no_check
+      url "https://homebrew-bottles.s3.fr-par.scw.cloud/irm/arm64_sonoma/20260710-0112caa9d8f66fe5354e20581a76c9730232e6ad+dirty.bottle.tar.gz"
+      sha256 "c9edc2705875f8b0cd6d37f6ead9d2108c94e4ca0dae0088c155d6dab14811a5"
     end
     on_intel do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/irm/sonoma/latest.bottle.tar.gz"
