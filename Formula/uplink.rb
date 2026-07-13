@@ -2,12 +2,12 @@ class Uplink < Formula
   desc "Signed, bandwidth-efficient over-the-air update bundles"
   homepage "https://tangled.org/gazagnaire.org/uplink"
   license "ISC"
-  version "20260710-0112caa9d8f66fe5354e20581a76c9730232e6ad+dirty"
+  version "20260713-c37b84fd9695d55de72f4cb56a8c0767239c80c1+dirty"
 
   on_macos do
     on_arm do
-      url "https://homebrew-bottles.s3.fr-par.scw.cloud/uplink/arm64_sonoma/20260710-0112caa9d8f66fe5354e20581a76c9730232e6ad+dirty.bottle.tar.gz"
-      sha256 "3075c98f58bada3dc750b989588fbd3ce38b117e609d2a49e6386fc1df359abc"
+      url "https://homebrew-bottles.s3.fr-par.scw.cloud/uplink/arm64_sonoma/20260713-c37b84fd9695d55de72f4cb56a8c0767239c80c1+dirty.bottle.tar.gz"
+      sha256 "8339420008391f71aae4f838e0660e8ae69562e20f938968ed8898d4aa5ccddf"
     end
     on_intel do
       url "https://homebrew-bottles.s3.fr-par.scw.cloud/uplink/sonoma/latest.bottle.tar.gz"
