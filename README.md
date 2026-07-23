@@ -26,22 +26,26 @@ brew tap samoht/monopam
 | `merlint` | Opinionated OCaml linter powered by Merlin |
 | `meross` | Meross smart plug control and monitoring |
 | `monopam` | OCaml monorepo manager with git subtrees |
+| `mrg` | Build and run mirage-eio unikernels across backends |
+| `opam-x` | Fast opam operations and cross-compilation toolchains |
 | `precommit` | Pre-commit hook manager for OCaml projects |
 | `prune` | Dead code remover for OCaml .mli files |
 | `pruner` | Dead code remover for OCaml .mli files |
 | `skills` | Claude Code skills manager |
 | `slack` | Slack API command-line client |
+| `slirp` | User-mode network gateway -- no VM, no privilege |
 | `space` | SpaceOS CLI — build and boot SpaceOS VMs |
 | `space-ground` | SpaceOS ground station with live web dashboard |
 | `space-test` | SpaceOS E2E test harness |
 | `uniboot` | Bootable disk image builder |
 | `uplink` | Signed, bandwidth-efficient over-the-air update bundles |
+| `vz` | Boot a Linux VM with a user-mode slirp network, no sudo |
 
 ## Usage
 
 ```bash
 # Install pre-built binaries
-brew install agent bottler crow dupfind git-mono git-x irm irmin linkedin matter mdns-query merlint meross monopam precommit prune pruner skills slack space space-ground space-test uniboot uplink
+brew install agent bottler crow dupfind git-mono git-x irm irmin linkedin matter mdns-query merlint meross monopam mrg opam-x precommit prune pruner skills slack slirp space space-ground space-test uniboot uplink vz
 
 # Or build from source
 brew install --HEAD agent
