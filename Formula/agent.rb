@@ -1,43 +1,27 @@
 class Agent < Formula
   desc "Claude Code container orchestrator"
-  homepage "https://tangled.org/gazagnaire.org/ocaml-agent"
+  homepage "https://tangled.org/gazagnaire.org/agent"
   license "ISC"
-  version "20260713-c37b84fd9695d55de72f4cb56a8c0767239c80c1+dirty"
+  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "9c9d0aca8fb9be39251315708f223f03adb861eb"
+  version "20260730-9c9d0aca8fb9be39251315708f223f03adb861eb-dirty"
 
-  on_macos do
-    on_arm do
-      url "https://homebrew-bottles.s3.fr-par.scw.cloud/agent/arm64_sonoma/20260713-c37b84fd9695d55de72f4cb56a8c0767239c80c1+dirty.bottle.tar.gz"
-      sha256 "b1c0d39914d57ce2667faf1f75f08fd3c229239d8356ba11fa90b53d75ebb725"
-    end
-    on_intel do
-      url "https://homebrew-bottles.s3.fr-par.scw.cloud/agent-latest.sonoma.bottle.tar.gz"
-      sha256 :no_check
-    end
+  bottle do
+    root_url "https://homebrew-bottles.s3.fr-par.scw.cloud/agent"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "ab7bd99191419b7ded4de96117452a40efd55dafc2aacc6fb64f3c1a8f1f50fd"
   end
 
-  on_linux do
-    url "https://homebrew-bottles.s3.fr-par.scw.cloud/agent-latest.x86_64_linux.bottle.tar.gz"
-    sha256 :no_check
-  end
+  head "https://tangled.org/gazagnaire.org/ocaml-git.git", branch: "main"
 
-  head "https://tangled.org/gazagnaire.org/mono.git", branch: "main"
-
-  head do
-    depends_on "ocaml" => :build
-    depends_on "opam" => :build
-    depends_on "dune" => :build
-    depends_on "docker" => :recommended
-  end
+  depends_on "ocaml" => :build
+  depends_on "opam" => :build
+  depends_on "dune" => :build
+  depends_on "docker" => :recommended
 
   def install
-    if build.head?
-      system "opam", "init", "--disable-sandboxing", "--no-setup", "-y" unless File.exist?("#{Dir.home}/.opam")
-      system "opam", "install", ".", "--deps-only", "--with-test=false", "-y", "--working-dir"
-      system "opam", "exec", "--", "dune", "build", "ocaml-agent/bin/main.exe"
-      bin.install "_build/default/ocaml-agent/bin/main.exe" => "agent"
-    else
-      bin.install "agent"
-    end
+    system "opam", "init", "--disable-sandboxing", "--no-setup", "-y" unless File.exist?("#{Dir.home}/.opam")
+    system "opam", "install", ".", "--deps-only", "-y", "--working-dir"
+    system "opam", "exec", "--", "dune", "build", "ocaml-agent/bin/main.exe"
+    bin.install "_build/default/ocaml-agent/bin/main.exe" => "agent"
   end
 
   test do

@@ -2,41 +2,25 @@ class Dupfind < Formula
   desc "Find cross-package duplicate code"
   homepage "https://tangled.org/gazagnaire.org/dupfind"
   license "ISC"
-  version "20260713-c37b84fd9695d55de72f4cb56a8c0767239c80c1+dirty"
+  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "9c9d0aca8fb9be39251315708f223f03adb861eb"
+  version "20260730-9c9d0aca8fb9be39251315708f223f03adb861eb-dirty"
 
-  on_macos do
-    on_arm do
-      url "https://homebrew-bottles.s3.fr-par.scw.cloud/dupfind/arm64_sonoma/20260713-c37b84fd9695d55de72f4cb56a8c0767239c80c1+dirty.bottle.tar.gz"
-      sha256 "92ecee0f6ab07875a992e3c60e6be7d832debc758d13ca0ae5a8d952db8bb42e"
-    end
-    on_intel do
-      url "https://homebrew-bottles.s3.fr-par.scw.cloud/dupfind-latest.sonoma.bottle.tar.gz"
-      sha256 :no_check
-    end
-  end
-
-  on_linux do
-    url "https://homebrew-bottles.s3.fr-par.scw.cloud/dupfind-latest.x86_64_linux.bottle.tar.gz"
-    sha256 :no_check
+  bottle do
+    root_url "https://homebrew-bottles.s3.fr-par.scw.cloud/dupfind"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "fac7eb50e580c4300a6f85ff089db7845c3827ee5c136c548cdc4c14ac5559e1"
   end
 
   head "https://tangled.org/gazagnaire.org/ocaml-git.git", branch: "main"
 
-  head do
-    depends_on "ocaml" => :build
-    depends_on "opam" => :build
-    depends_on "dune" => :build
-  end
+  depends_on "ocaml" => :build
+  depends_on "opam" => :build
+  depends_on "dune" => :build
 
   def install
-    if build.head?
-      system "opam", "init", "--disable-sandboxing", "--no-setup", "-y" unless File.exist?("#{Dir.home}/.opam")
-      system "opam", "install", ".", "--deps-only", "--with-test=false", "-y", "--working-dir"
-      system "opam", "exec", "--", "dune", "build", "dupfind/bin/main.exe"
-      bin.install "_build/default/dupfind/bin/main.exe" => "dupfind"
-    else
-      bin.install "dupfind"
-    end
+    system "opam", "init", "--disable-sandboxing", "--no-setup", "-y" unless File.exist?("#{Dir.home}/.opam")
+    system "opam", "install", ".", "--deps-only", "-y", "--working-dir"
+    system "opam", "exec", "--", "dune", "build", "dupfind/bin/main.exe"
+    bin.install "_build/default/dupfind/bin/main.exe" => "dupfind"
   end
 
   test do

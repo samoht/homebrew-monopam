@@ -2,41 +2,25 @@ class Skills < Formula
   desc "Claude Code skills manager"
   homepage "https://tangled.org/gazagnaire.org/skills"
   license "ISC"
-  version "20260713-c37b84fd9695d55de72f4cb56a8c0767239c80c1+dirty"
+  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "9c9d0aca8fb9be39251315708f223f03adb861eb"
+  version "20260730-9c9d0aca8fb9be39251315708f223f03adb861eb-dirty"
 
-  on_macos do
-    on_arm do
-      url "https://homebrew-bottles.s3.fr-par.scw.cloud/skills/arm64_sonoma/20260713-c37b84fd9695d55de72f4cb56a8c0767239c80c1+dirty.bottle.tar.gz"
-      sha256 "7faf249719f89113c6123d86d515ca193c560c97a68ebc9e6a845d74487c2294"
-    end
-    on_intel do
-      url "https://homebrew-bottles.s3.fr-par.scw.cloud/skills-latest.sonoma.bottle.tar.gz"
-      sha256 :no_check
-    end
-  end
-
-  on_linux do
-    url "https://homebrew-bottles.s3.fr-par.scw.cloud/skills-latest.x86_64_linux.bottle.tar.gz"
-    sha256 :no_check
+  bottle do
+    root_url "https://homebrew-bottles.s3.fr-par.scw.cloud/skills"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "5927d5a1af49d4e39292ca6227b9f286af5f25a43b220c80601a85bbbfa3e953"
   end
 
   head "https://tangled.org/gazagnaire.org/ocaml-git.git", branch: "main"
 
-  head do
-    depends_on "ocaml" => :build
-    depends_on "opam" => :build
-    depends_on "dune" => :build
-  end
+  depends_on "ocaml" => :build
+  depends_on "opam" => :build
+  depends_on "dune" => :build
 
   def install
-    if build.head?
-      system "opam", "init", "--disable-sandboxing", "--no-setup", "-y" unless File.exist?("#{Dir.home}/.opam")
-      system "opam", "install", ".", "--deps-only", "--with-test=false", "-y", "--working-dir"
-      system "opam", "exec", "--", "dune", "build", "ocaml-claude-skills/bin/main.exe"
-      bin.install "_build/default/ocaml-claude-skills/bin/main.exe" => "skills"
-    else
-      bin.install "skills"
-    end
+    system "opam", "init", "--disable-sandboxing", "--no-setup", "-y" unless File.exist?("#{Dir.home}/.opam")
+    system "opam", "install", ".", "--deps-only", "-y", "--working-dir"
+    system "opam", "exec", "--", "dune", "build", "ocaml-claude-skills/bin/main.exe"
+    bin.install "_build/default/ocaml-claude-skills/bin/main.exe" => "skills"
   end
 
   test do

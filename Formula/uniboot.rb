@@ -1,42 +1,26 @@
 class Uniboot < Formula
-  desc "Bootable disk image builder with GPT partition tables"
+  desc "Bootable disk image builder"
   homepage "https://tangled.org/gazagnaire.org/uniboot"
   license "ISC"
-  version "20260713-c37b84fd9695d55de72f4cb56a8c0767239c80c1+dirty"
+  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "9c9d0aca8fb9be39251315708f223f03adb861eb"
+  version "20260730-9c9d0aca8fb9be39251315708f223f03adb861eb-dirty"
 
-  on_macos do
-    on_arm do
-      url "https://homebrew-bottles.s3.fr-par.scw.cloud/uniboot/arm64_sonoma/20260713-c37b84fd9695d55de72f4cb56a8c0767239c80c1+dirty.bottle.tar.gz"
-      sha256 "708ffb6b163720efe2cb6369ab0ced704ec4087500b6d878db1b1c551e776199"
-    end
-    on_intel do
-      url "https://homebrew-bottles.s3.fr-par.scw.cloud/uniboot-latest.sonoma.bottle.tar.gz"
-      sha256 :no_check
-    end
+  bottle do
+    root_url "https://homebrew-bottles.s3.fr-par.scw.cloud/uniboot"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "4f04a0f5133939b455ae02d37525736a8c237205764be0df557e2edc37e446b2"
   end
 
-  on_linux do
-    url "https://homebrew-bottles.s3.fr-par.scw.cloud/uniboot-latest.x86_64_linux.bottle.tar.gz"
-    sha256 :no_check
-  end
+  head "https://tangled.org/gazagnaire.org/ocaml-git.git", branch: "main"
 
-  head "https://tangled.org/gazagnaire.org/mono.git", branch: "main"
-
-  head do
-    depends_on "ocaml" => :build
-    depends_on "opam" => :build
-    depends_on "dune" => :build
-  end
+  depends_on "ocaml" => :build
+  depends_on "opam" => :build
+  depends_on "dune" => :build
 
   def install
-    if build.head?
-      system "opam", "init", "--disable-sandboxing", "--no-setup", "-y" unless File.exist?("#{Dir.home}/.opam")
-      system "opam", "install", ".", "--deps-only", "--with-test=false", "-y", "--working-dir"
-      system "opam", "exec", "--", "dune", "build", "uniboot/bin/main.exe"
-      bin.install "_build/default/uniboot/bin/main.exe" => "uniboot"
-    else
-      bin.install "uniboot"
-    end
+    system "opam", "init", "--disable-sandboxing", "--no-setup", "-y" unless File.exist?("#{Dir.home}/.opam")
+    system "opam", "install", ".", "--deps-only", "-y", "--working-dir"
+    system "opam", "exec", "--", "dune", "build", "uniboot/bin/main.exe"
+    bin.install "_build/default/uniboot/bin/main.exe" => "uniboot"
   end
 
   test do

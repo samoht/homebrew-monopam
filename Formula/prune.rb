@@ -1,43 +1,27 @@
 class Prune < Formula
-  desc "Find and remove unused exports in OCaml interface files"
+  desc "Dead code remover for OCaml .mli files"
   homepage "https://tangled.org/gazagnaire.org/prune"
   license "ISC"
-  version "20260713-c37b84fd9695d55de72f4cb56a8c0767239c80c1+dirty"
+  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "9c9d0aca8fb9be39251315708f223f03adb861eb"
+  version "20260730-9c9d0aca8fb9be39251315708f223f03adb861eb-dirty"
+  conflicts_with "graphviz", because: "both install a `prune` binary"
 
-  on_macos do
-    on_arm do
-      url "https://homebrew-bottles.s3.fr-par.scw.cloud/prune/arm64_sonoma/20260713-c37b84fd9695d55de72f4cb56a8c0767239c80c1+dirty.bottle.tar.gz"
-      sha256 "70c541ddf7c8b9b66e34231ab83b30d422737758588c561d68f7d6bcbb84a872"
-    end
-    on_intel do
-      url "https://homebrew-bottles.s3.fr-par.scw.cloud/prune-latest.sonoma.bottle.tar.gz"
-      sha256 :no_check
-    end
+  bottle do
+    root_url "https://homebrew-bottles.s3.fr-par.scw.cloud/prune"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "965f8147183a05605a98a725a7b1e810b70f2456a7529b0d68fa600323340aaf"
   end
 
-  on_linux do
-    url "https://homebrew-bottles.s3.fr-par.scw.cloud/prune-latest.x86_64_linux.bottle.tar.gz"
-    sha256 :no_check
-  end
+  head "https://tangled.org/gazagnaire.org/ocaml-git.git", branch: "main"
 
-  # Build from source with --HEAD
-  head "https://tangled.org/gazagnaire.org/mono.git", branch: "main"
-
-  head do
-    depends_on "ocaml" => :build
-    depends_on "opam" => :build
-    depends_on "dune" => :build
-  end
+  depends_on "ocaml" => :build
+  depends_on "opam" => :build
+  depends_on "dune" => :build
 
   def install
-    if build.head?
-      system "opam", "init", "--disable-sandboxing", "--no-setup", "-y" unless File.exist?("#{Dir.home}/.opam")
-      system "opam", "install", ".", "--deps-only", "--with-test=false", "-y", "--working-dir"
-      system "opam", "exec", "--", "dune", "build", "prune/bin/prune.exe"
-      bin.install "_build/default/prune/bin/prune.exe" => "prune"
-    else
-      bin.install "prune"
-    end
+    system "opam", "init", "--disable-sandboxing", "--no-setup", "-y" unless File.exist?("#{Dir.home}/.opam")
+    system "opam", "install", ".", "--deps-only", "-y", "--working-dir"
+    system "opam", "exec", "--", "dune", "build", "prune/bin/main.exe"
+    bin.install "_build/default/prune/bin/main.exe" => "prune"
   end
 
   test do

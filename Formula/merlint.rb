@@ -2,42 +2,25 @@ class Merlint < Formula
   desc "Opinionated OCaml linter powered by Merlin"
   homepage "https://tangled.org/gazagnaire.org/merlint"
   license "ISC"
-  version "20260713-c37b84fd9695d55de72f4cb56a8c0767239c80c1+dirty"
+  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "9c9d0aca8fb9be39251315708f223f03adb861eb"
+  version "20260730-9c9d0aca8fb9be39251315708f223f03adb861eb-dirty"
 
-  on_macos do
-    on_arm do
-      url "https://homebrew-bottles.s3.fr-par.scw.cloud/merlint/arm64_sonoma/20260713-c37b84fd9695d55de72f4cb56a8c0767239c80c1+dirty.bottle.tar.gz"
-      sha256 "b4166d507e141c6b233a41913c78eb0d97b70cf861c3bcd55e6123b1a1679f54"
-    end
-    on_intel do
-      url "https://homebrew-bottles.s3.fr-par.scw.cloud/merlint-latest.sonoma.bottle.tar.gz"
-      sha256 :no_check
-    end
+  bottle do
+    root_url "https://homebrew-bottles.s3.fr-par.scw.cloud/merlint"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "de4f460c22a8813fb577d395ccba57385d4bfd9d4a8e2d744a805136621f5334"
   end
 
-  on_linux do
-    url "https://homebrew-bottles.s3.fr-par.scw.cloud/merlint-latest.x86_64_linux.bottle.tar.gz"
-    sha256 :no_check
-  end
+  head "https://tangled.org/gazagnaire.org/ocaml-git.git", branch: "main"
 
-  # Build from source with --HEAD
-  head "https://tangled.org/gazagnaire.org/mono.git", branch: "main"
-
-  head do
-    depends_on "ocaml" => :build
-    depends_on "opam" => :build
-    depends_on "dune" => :build
-  end
+  depends_on "ocaml" => :build
+  depends_on "opam" => :build
+  depends_on "dune" => :build
 
   def install
-    if build.head?
-      system "opam", "init", "--disable-sandboxing", "--no-setup", "-y" unless File.exist?("#{Dir.home}/.opam")
-      system "opam", "install", ".", "--deps-only", "--with-test=false", "-y", "--working-dir"
-      system "opam", "exec", "--", "dune", "build", "merlint/bin/main.exe"
-      bin.install "_build/default/merlint/bin/main.exe" => "merlint"
-    else
-      bin.install "merlint"
-    end
+    system "opam", "init", "--disable-sandboxing", "--no-setup", "-y" unless File.exist?("#{Dir.home}/.opam")
+    system "opam", "install", ".", "--deps-only", "-y", "--working-dir"
+    system "opam", "exec", "--", "dune", "build", "merlint/bin/main.exe"
+    bin.install "_build/default/merlint/bin/main.exe" => "merlint"
   end
 
   test do

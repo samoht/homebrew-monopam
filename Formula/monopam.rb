@@ -2,41 +2,25 @@ class Monopam < Formula
   desc "OCaml monorepo manager with git subtrees"
   homepage "https://tangled.org/gazagnaire.org/monopam"
   license "ISC"
-  version "20260722-3a9fdcc001e630ba641fb347638ad24d27e519d7"
+  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "9c9d0aca8fb9be39251315708f223f03adb861eb"
+  version "20260730-9c9d0aca8fb9be39251315708f223f03adb861eb-dirty"
 
-  on_macos do
-    on_arm do
-      url "https://homebrew-bottles.s3.fr-par.scw.cloud/monopam/arm64_sonoma/20260722-3a9fdcc001e630ba641fb347638ad24d27e519d7.bottle.tar.gz"
-      sha256 "b1701d3bf0bab4286f5f8dfcbcef7fa9750e09765a2a7ae9394977ed57115b48"
-    end
-    on_intel do
-      url "https://homebrew-bottles.s3.fr-par.scw.cloud/monopam-latest.sonoma.bottle.tar.gz"
-      sha256 :no_check
-    end
+  bottle do
+    root_url "https://homebrew-bottles.s3.fr-par.scw.cloud/monopam"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "7278652ec5e2caac40f5077ec43850267dd3fee3e9b0ad22122b9280c0831b9d"
   end
 
-  on_linux do
-    url "https://homebrew-bottles.s3.fr-par.scw.cloud/monopam-latest.x86_64_linux.bottle.tar.gz"
-    sha256 :no_check
-  end
+  head "https://tangled.org/gazagnaire.org/ocaml-git.git", branch: "main"
 
-  head "https://tangled.org/gazagnaire.org/mono.git", branch: "main"
-
-  head do
-    depends_on "ocaml" => :build
-    depends_on "opam" => :build
-    depends_on "dune" => :build
-  end
+  depends_on "ocaml" => :build
+  depends_on "opam" => :build
+  depends_on "dune" => :build
 
   def install
-    if build.head?
-      system "opam", "init", "--disable-sandboxing", "--no-setup", "-y" unless File.exist?("#{Dir.home}/.opam")
-      system "opam", "install", ".", "--deps-only", "--with-test=false", "-y", "--working-dir"
-      system "opam", "exec", "--", "dune", "build", "monopam/bin/main.exe"
-      bin.install "_build/default/monopam/bin/main.exe" => "monopam"
-    else
-      bin.install "monopam"
-    end
+    system "opam", "init", "--disable-sandboxing", "--no-setup", "-y" unless File.exist?("#{Dir.home}/.opam")
+    system "opam", "install", ".", "--deps-only", "-y", "--working-dir"
+    system "opam", "exec", "--", "dune", "build", "monopam/bin/main.exe"
+    bin.install "_build/default/monopam/bin/main.exe" => "monopam"
   end
 
   test do

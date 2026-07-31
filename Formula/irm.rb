@@ -2,41 +2,25 @@ class Irm < Formula
   desc "Content-addressable store with Git support"
   homepage "https://tangled.org/gazagnaire.org/irm"
   license "ISC"
-  version "20260713-c37b84fd9695d55de72f4cb56a8c0767239c80c1+dirty"
+  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "9c9d0aca8fb9be39251315708f223f03adb861eb"
+  version "20260730-9c9d0aca8fb9be39251315708f223f03adb861eb-dirty"
 
-  on_macos do
-    on_arm do
-      url "https://homebrew-bottles.s3.fr-par.scw.cloud/irm/arm64_sonoma/20260713-c37b84fd9695d55de72f4cb56a8c0767239c80c1+dirty.bottle.tar.gz"
-      sha256 "8f91be4b7b7ed01a9be94f7b406988e624c1b54111b5907bf931c27542d1b2cf"
-    end
-    on_intel do
-      url "https://homebrew-bottles.s3.fr-par.scw.cloud/irm/sonoma/latest.bottle.tar.gz"
-      sha256 :no_check
-    end
-  end
-
-  on_linux do
-    url "https://homebrew-bottles.s3.fr-par.scw.cloud/irm/x86_64_linux/latest.bottle.tar.gz"
-    sha256 :no_check
+  bottle do
+    root_url "https://homebrew-bottles.s3.fr-par.scw.cloud/irm"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "09f7520053b2679078fa4bcd158edc24022d1e67b8d72363ebbdc229bb3685b3"
   end
 
   head "https://tangled.org/gazagnaire.org/ocaml-git.git", branch: "main"
 
-  head do
-    depends_on "ocaml" => :build
-    depends_on "opam" => :build
-    depends_on "dune" => :build
-  end
+  depends_on "ocaml" => :build
+  depends_on "opam" => :build
+  depends_on "dune" => :build
 
   def install
-    if build.head?
-      system "opam", "init", "--disable-sandboxing", "--no-setup", "-y" unless File.exist?("#{Dir.home}/.opam")
-      system "opam", "install", ".", "--deps-only", "--with-test=false", "-y", "--working-dir"
-      system "opam", "exec", "--", "dune", "build", "irmin/bin/main.exe"
-      bin.install "_build/default/irmin/bin/main.exe" => "irm"
-    else
-      bin.install "irm"
-    end
+    system "opam", "init", "--disable-sandboxing", "--no-setup", "-y" unless File.exist?("#{Dir.home}/.opam")
+    system "opam", "install", ".", "--deps-only", "-y", "--working-dir"
+    system "opam", "exec", "--", "dune", "build", "irmin/bin/main.exe"
+    bin.install "_build/default/irmin/bin/main.exe" => "irm"
   end
 
   test do
