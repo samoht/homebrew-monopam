@@ -2,12 +2,12 @@ class Merlint < Formula
   desc "Opinionated OCaml linter powered by Merlin"
   homepage "https://tangled.org/gazagnaire.org/merlint"
   license "ISC"
-  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "9c9d0aca8fb9be39251315708f223f03adb861eb"
-  version "20260730-9c9d0aca8fb9be39251315708f223f03adb861eb-dirty"
+  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "394210fc3ce8238400914db81182ba257f0ac02c"
+  version "20260827-394210fc3ce8238400914db81182ba257f0ac02c"
 
   bottle do
     root_url "https://homebrew-bottles.s3.fr-par.scw.cloud/merlint"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "de4f460c22a8813fb577d395ccba57385d4bfd9d4a8e2d744a805136621f5334"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "1aeedd39789caf02327c655b822d00309ee8a37a721e69cdfbfa853f3284c198"
   end
 
   head "https://tangled.org/gazagnaire.org/ocaml-git.git", branch: "main"
