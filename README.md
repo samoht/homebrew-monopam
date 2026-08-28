@@ -16,7 +16,7 @@ brew tap samoht/monopam
 | `bottler` | Homebrew bottle builder and tap manager |
 | `crow` | Crowbar campaign orchestrator for AFL fuzzing |
 | `dupfind` | Find cross-package duplicate code |
-| `git-mono` | Pure OCaml git subtree split |
+| `git-mono` | Pure OCaml git subtree split (retired) |
 | `git-x` | Fast git operations on the object DB (no checkout) |
 | `irm` | Content-addressable store with Git support |
 | `irmin` | Content-addressable store with Git and ATProto MST support |
@@ -34,9 +34,8 @@ brew tap samoht/monopam
 | `skills` | Claude Code skills manager |
 | `slack` | Slack API command-line client |
 | `slirp` | User-mode network gateway -- no VM, no privilege |
-| `space` | SpaceOS CLI — build and boot SpaceOS VMs |
-| `space-ground` | SpaceOS ground station with live web dashboard |
-| `space-test` | SpaceOS E2E test harness |
+| `space-ground` | SpaceOS ground station with live web dashboard (retired) |
+| `space-test` | SpaceOS E2E test harness (retired) |
 | `uniboot` | Bootable disk image builder |
 | `uplink` | Signed, bandwidth-efficient over-the-air update bundles |
 | `vz` | Boot a Linux VM with a user-mode slirp network, no sudo |
@@ -45,7 +44,7 @@ brew tap samoht/monopam
 
 ```bash
 # Install pre-built binaries
-brew install agent bottler crow dupfind git-mono git-x irm irmin linkedin matter mdns-query merlint meross monopam mrg opam-x precommit prune pruner skills slack slirp space space-ground space-test uniboot uplink vz
+brew install agent bottler crow dupfind git-x irm irmin linkedin matter mdns-query merlint meross monopam mrg opam-x precommit prune pruner skills slack slirp uniboot uplink vz
 
 # Or build from source
 brew install --HEAD agent
