@@ -34,7 +34,6 @@ brew tap samoht/monopam
 | `skills` | Claude Code skills manager |
 | `slack` | Slack API command-line client |
 | `slirp` | User-mode network gateway -- no VM, no privilege |
-| `space-ground` | SpaceOS ground station with live web dashboard (retired) |
 | `space-test` | SpaceOS E2E test harness (retired) |
 | `uniboot` | Bootable disk image builder |
 | `uplink` | Signed, bandwidth-efficient over-the-air update bundles |
