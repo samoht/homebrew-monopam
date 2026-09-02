@@ -2,12 +2,12 @@ class Slirp < Formula
   desc "User-mode network gateway -- no VM, no privilege"
   homepage "https://tangled.org/gazagnaire.org/slirp"
   license "ISC"
-  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "9c9d0aca8fb9be39251315708f223f03adb861eb"
-  version "20260730-9c9d0aca8fb9be39251315708f223f03adb861eb-dirty"
+  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "fcfa6a29460bd922549bc168644cb0834239302b"
+  version "20260902-fcfa6a29460bd922549bc168644cb0834239302b-dirty"
 
   bottle do
     root_url "https://homebrew-bottles.s3.fr-par.scw.cloud/slirp"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "d126c3408beee874caa24976d80c5fa67e9a9d15dab463559f91d61f14cacada"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "604f2064f3abc5dce36493c3b872a0ba43bff27b63f573a6eb8c808cde379ebb"
   end
 
   head "https://tangled.org/gazagnaire.org/ocaml-git.git", branch: "main"

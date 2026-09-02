@@ -19,7 +19,6 @@ brew tap samoht/monopam
 | `git-mono` | Pure OCaml git subtree split (retired) |
 | `git-x` | Fast git operations on the object DB (no checkout) |
 | `irm` | Content-addressable store with Git support |
-| `irmin` | Content-addressable store with Git and ATProto MST support |
 | `linkedin` | LinkedIn CLI for profiles, posts, and cookies |
 | `matter` | Matter smart home device discovery and control |
 | `mdns-query` | mDNS service discovery query tool |
@@ -30,7 +29,6 @@ brew tap samoht/monopam
 | `opam-x` | Fast opam operations and cross-compilation toolchains |
 | `precommit` | Pre-commit hook manager for OCaml projects |
 | `prune` | Dead code remover for OCaml .mli files |
-| `pruner` | Dead code remover for OCaml .mli files |
 | `skills` | Claude Code skills manager |
 | `slack` | Slack API command-line client |
 | `slirp` | User-mode network gateway -- no VM, no privilege |
@@ -42,7 +40,7 @@ brew tap samoht/monopam
 
 ```bash
 # Install pre-built binaries
-brew install agent bottler crow dupfind git-x irm irmin linkedin matter mdns-query merlint meross monopam mrg opam-x precommit prune pruner skills slack slirp uniboot uplink vz
+brew install agent bottler crow dupfind git-x irm linkedin matter mdns-query merlint meross monopam mrg opam-x precommit prune skills slack slirp uniboot uplink vz
 
 # Or build from source
 brew install --HEAD agent

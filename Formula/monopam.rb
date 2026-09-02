@@ -2,12 +2,12 @@ class Monopam < Formula
   desc "OCaml monorepo manager with git subtrees"
   homepage "https://tangled.org/gazagnaire.org/monopam"
   license "ISC"
-  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "9c9d0aca8fb9be39251315708f223f03adb861eb"
-  version "20260730-9c9d0aca8fb9be39251315708f223f03adb861eb-dirty"
+  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "fcfa6a29460bd922549bc168644cb0834239302b"
+  version "20260902-fcfa6a29460bd922549bc168644cb0834239302b-dirty"
 
   bottle do
     root_url "https://homebrew-bottles.s3.fr-par.scw.cloud/monopam"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "7278652ec5e2caac40f5077ec43850267dd3fee3e9b0ad22122b9280c0831b9d"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "7f86f7512e676f0a44a15485c86410eeec7ef5c010489d31144121b08082e4ff"
   end
 
   head "https://tangled.org/gazagnaire.org/ocaml-git.git", branch: "main"

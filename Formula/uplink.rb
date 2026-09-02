@@ -2,12 +2,12 @@ class Uplink < Formula
   desc "Signed, bandwidth-efficient over-the-air update bundles"
   homepage "https://tangled.org/gazagnaire.org/uplink"
   license "ISC"
-  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "9c9d0aca8fb9be39251315708f223f03adb861eb"
-  version "20260730-9c9d0aca8fb9be39251315708f223f03adb861eb-dirty"
+  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "fcfa6a29460bd922549bc168644cb0834239302b"
+  version "20260902-fcfa6a29460bd922549bc168644cb0834239302b-dirty"
 
   bottle do
     root_url "https://homebrew-bottles.s3.fr-par.scw.cloud/uplink"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "49bed1f8477ce27fa07244a9086baf53d72c062f7646d4821c9aecd5eadd70bb"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "87fd27f75c6941656beb1b12b2be99f3852b5070e283220ee4704bfed9b4b5b1"
   end
 
   head "https://tangled.org/gazagnaire.org/ocaml-git.git", branch: "main"

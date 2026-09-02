@@ -2,12 +2,12 @@ class Skills < Formula
   desc "Claude Code skills manager"
   homepage "https://tangled.org/gazagnaire.org/skills"
   license "ISC"
-  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "9c9d0aca8fb9be39251315708f223f03adb861eb"
-  version "20260730-9c9d0aca8fb9be39251315708f223f03adb861eb-dirty"
+  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "fcfa6a29460bd922549bc168644cb0834239302b"
+  version "20260902-fcfa6a29460bd922549bc168644cb0834239302b-dirty"
 
   bottle do
     root_url "https://homebrew-bottles.s3.fr-par.scw.cloud/skills"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "5927d5a1af49d4e39292ca6227b9f286af5f25a43b220c80601a85bbbfa3e953"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "719b0eec7630d316525fdf4bf6e08804e227280ed92a607645a1974c5b580fa2"
   end
 
   head "https://tangled.org/gazagnaire.org/ocaml-git.git", branch: "main"

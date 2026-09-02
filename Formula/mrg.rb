@@ -2,12 +2,12 @@ class Mrg < Formula
   desc "Build and run mirage-eio unikernels across backends"
   homepage "https://tangled.org/gazagnaire.org/mrg"
   license "ISC"
-  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "9c9d0aca8fb9be39251315708f223f03adb861eb"
-  version "20260730-9c9d0aca8fb9be39251315708f223f03adb861eb-dirty"
+  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "fcfa6a29460bd922549bc168644cb0834239302b"
+  version "20260902-fcfa6a29460bd922549bc168644cb0834239302b-dirty"
 
   bottle do
     root_url "https://homebrew-bottles.s3.fr-par.scw.cloud/mrg"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "8959b73b5f262b9cc45413a2072ff282843e45f98b1030aed5aee59139962947"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "bd79ee0ebe16170340ee85657658c50ff6eda5b3789060684493cd37c5558e07"
   end
 
   head "https://tangled.org/gazagnaire.org/ocaml-git.git", branch: "main"

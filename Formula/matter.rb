@@ -2,12 +2,12 @@ class Matter < Formula
   desc "Matter smart home device discovery and control"
   homepage "https://tangled.org/gazagnaire.org/matter"
   license "ISC"
-  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "9c9d0aca8fb9be39251315708f223f03adb861eb"
-  version "20260730-9c9d0aca8fb9be39251315708f223f03adb861eb-dirty"
+  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "fcfa6a29460bd922549bc168644cb0834239302b"
+  version "20260902-fcfa6a29460bd922549bc168644cb0834239302b-dirty"
 
   bottle do
     root_url "https://homebrew-bottles.s3.fr-par.scw.cloud/matter"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "e98699dd5d75adbaf78fab1ca6aea17547006767ecefcba406e8d3da608264c6"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "413922fb24c460395393a48d20cb84772ae4994233c79333dae5c4c98d0383e2"
   end
 
   head "https://tangled.org/gazagnaire.org/ocaml-git.git", branch: "main"

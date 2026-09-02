@@ -2,12 +2,12 @@ class OpamX < Formula
   desc "Fast opam operations and cross-compilation toolchains"
   homepage "https://tangled.org/gazagnaire.org/opam-x"
   license "ISC"
-  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "9c9d0aca8fb9be39251315708f223f03adb861eb"
-  version "20260730-9c9d0aca8fb9be39251315708f223f03adb861eb-dirty"
+  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "fcfa6a29460bd922549bc168644cb0834239302b"
+  version "20260902-fcfa6a29460bd922549bc168644cb0834239302b-dirty"
 
   bottle do
     root_url "https://homebrew-bottles.s3.fr-par.scw.cloud/opam-x"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "f54cd8b0e685b71dec61c05baca7d570dfd9e0aef0cd30aa936aadcd39c61936"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "4bcf03ba02b6fa53915160a424730d6434c0949d17d8b85b52b195a56dafcaf7"
   end
 
   head "https://tangled.org/gazagnaire.org/ocaml-git.git", branch: "main"

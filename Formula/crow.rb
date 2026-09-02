@@ -2,12 +2,12 @@ class Crow < Formula
   desc "Crowbar campaign orchestrator for AFL fuzzing"
   homepage "https://tangled.org/gazagnaire.org/crow"
   license "ISC"
-  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "9c9d0aca8fb9be39251315708f223f03adb861eb"
-  version "20260730-9c9d0aca8fb9be39251315708f223f03adb861eb-dirty"
+  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "fcfa6a29460bd922549bc168644cb0834239302b"
+  version "20260902-fcfa6a29460bd922549bc168644cb0834239302b-dirty"
 
   bottle do
     root_url "https://homebrew-bottles.s3.fr-par.scw.cloud/crow"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "166a9728f41a9519b2b59b90c6476e67dff261d22e073defa1119dddbead8f41"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "fdb14cc4851ec73d5555c82ed79e9e1f54adb318b6eecf3b8de68950e8594f1a"
   end
 
   head "https://tangled.org/gazagnaire.org/ocaml-git.git", branch: "main"

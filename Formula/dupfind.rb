@@ -2,12 +2,12 @@ class Dupfind < Formula
   desc "Find cross-package duplicate code"
   homepage "https://tangled.org/gazagnaire.org/dupfind"
   license "ISC"
-  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "9c9d0aca8fb9be39251315708f223f03adb861eb"
-  version "20260730-9c9d0aca8fb9be39251315708f223f03adb861eb-dirty"
+  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "fcfa6a29460bd922549bc168644cb0834239302b"
+  version "20260902-fcfa6a29460bd922549bc168644cb0834239302b-dirty"
 
   bottle do
     root_url "https://homebrew-bottles.s3.fr-par.scw.cloud/dupfind"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "fac7eb50e580c4300a6f85ff089db7845c3827ee5c136c548cdc4c14ac5559e1"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "b02ad567b744936c6f6a8624726242ca741465065b9a11ee32565f9b5af2bd66"
   end
 
   head "https://tangled.org/gazagnaire.org/ocaml-git.git", branch: "main"
