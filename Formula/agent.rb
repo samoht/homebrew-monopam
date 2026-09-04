@@ -2,12 +2,12 @@ class Agent < Formula
   desc "Claude Code container orchestrator"
   homepage "https://tangled.org/gazagnaire.org/agent"
   license "ISC"
-  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "fcfa6a29460bd922549bc168644cb0834239302b"
-  version "20260902-fcfa6a29460bd922549bc168644cb0834239302b-dirty"
+  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "9c7cfbb598ec5b709439158712db26318961fbe2"
+  version "20260904-9c7cfbb598ec5b709439158712db26318961fbe2"
 
   bottle do
     root_url "https://homebrew-bottles.s3.fr-par.scw.cloud/agent"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "75119f6ac6bd79892e85a78311562e1ffb04edd53e2d4aeeffe600f0e6964397"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "3276f65f8fcb6d877f5729f740e1172aff64c9f47698d2cfb34bdbc310c34588"
   end
 
   head "https://tangled.org/gazagnaire.org/ocaml-git.git", branch: "main"

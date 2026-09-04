@@ -2,12 +2,12 @@ class Bottler < Formula
   desc "Homebrew bottle builder and tap manager"
   homepage "https://tangled.org/gazagnaire.org/bottler"
   license "ISC"
-  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "fcfa6a29460bd922549bc168644cb0834239302b"
-  version "20260902-fcfa6a29460bd922549bc168644cb0834239302b-dirty"
+  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "9c7cfbb598ec5b709439158712db26318961fbe2"
+  version "20260904-9c7cfbb598ec5b709439158712db26318961fbe2"
 
   bottle do
     root_url "https://homebrew-bottles.s3.fr-par.scw.cloud/bottler"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "ce6a479d1502c9bb6483fe213fe222f56bc02d27d50da8e8c8b7fa3a973a7022"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "511f19fcfb26b459df88365ed44233dc83a91bdab74df8b39c6ffc5bc12ffa4b"
   end
 
   head "https://tangled.org/gazagnaire.org/ocaml-git.git", branch: "main"

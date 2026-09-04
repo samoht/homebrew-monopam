@@ -2,12 +2,12 @@ class Slack < Formula
   desc "Slack API command-line client"
   homepage "https://tangled.org/gazagnaire.org/slack"
   license "ISC"
-  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "fcfa6a29460bd922549bc168644cb0834239302b"
-  version "20260902-fcfa6a29460bd922549bc168644cb0834239302b-dirty"
+  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "9c7cfbb598ec5b709439158712db26318961fbe2"
+  version "20260904-9c7cfbb598ec5b709439158712db26318961fbe2"
 
   bottle do
     root_url "https://homebrew-bottles.s3.fr-par.scw.cloud/slack"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "cd9e294e1730ada25c41cddecbabf4642f27ef7b85085429f34ed1231ff4fb2e"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "c3abf91b3ab4e2693cff4088f1a07e09890ed0125f0cbd41e4f23105edeffc9d"
   end
 
   head "https://tangled.org/gazagnaire.org/ocaml-git.git", branch: "main"

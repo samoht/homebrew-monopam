@@ -2,12 +2,12 @@ class Linkedin < Formula
   desc "LinkedIn CLI for profiles, posts, and cookies"
   homepage "https://tangled.org/gazagnaire.org/linkedin"
   license "ISC"
-  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "fcfa6a29460bd922549bc168644cb0834239302b"
-  version "20260902-fcfa6a29460bd922549bc168644cb0834239302b-dirty"
+  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "9c7cfbb598ec5b709439158712db26318961fbe2"
+  version "20260904-9c7cfbb598ec5b709439158712db26318961fbe2"
 
   bottle do
     root_url "https://homebrew-bottles.s3.fr-par.scw.cloud/linkedin"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "d7c3f8f26af5cfa9e360c2b5b41f7d0b667cb3dd90e531a679c9ffa55429142f"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "0b7d3052e0fe44d64f7778499d95579c10d3c9d6499215e61b0358923d330c97"
   end
 
   head "https://tangled.org/gazagnaire.org/ocaml-git.git", branch: "main"

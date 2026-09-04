@@ -2,12 +2,12 @@ class Irm < Formula
   desc "Content-addressable store with Git support"
   homepage "https://tangled.org/gazagnaire.org/irm"
   license "ISC"
-  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "fcfa6a29460bd922549bc168644cb0834239302b"
-  version "20260902-fcfa6a29460bd922549bc168644cb0834239302b-dirty"
+  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "9c7cfbb598ec5b709439158712db26318961fbe2"
+  version "20260904-9c7cfbb598ec5b709439158712db26318961fbe2"
 
   bottle do
     root_url "https://homebrew-bottles.s3.fr-par.scw.cloud/irm"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "381b37fa7a0e1140088c59eb6389c9c6355636d9373ca23f0dafb857a0a5630d"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "dc561b9bc37c0eab8b90c7faf7fe6a99ad1e8b60f7f1a9705814f0e0ca9e0e7a"
   end
 
   head "https://tangled.org/gazagnaire.org/ocaml-git.git", branch: "main"
