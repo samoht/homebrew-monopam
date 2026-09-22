@@ -2,13 +2,13 @@ class Prune < Formula
   desc "Dead code remover for OCaml .mli files"
   homepage "https://tangled.org/gazagnaire.org/prune"
   license "ISC"
-  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "9c7cfbb598ec5b709439158712db26318961fbe2"
-  version "20260904-9c7cfbb598ec5b709439158712db26318961fbe2"
+  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "bf6f0d85f9a9e95846a70f64248b349745032fe7"
+  version "20260922-bf6f0d85f9a9e95846a70f64248b349745032fe7"
   conflicts_with "graphviz", because: "both install a `prune` binary"
 
   bottle do
     root_url "https://homebrew-bottles.s3.fr-par.scw.cloud/prune"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "bcdcc7fc5f224ef30e629b001e2749b954b3530798277c3ebea72a2a61c75810"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "6a7a0363a5064334dafd95cd6c4323a2772f74e89df4c27f8d1838d9b7dd801e"
   end
 
   head "https://tangled.org/gazagnaire.org/ocaml-git.git", branch: "main"

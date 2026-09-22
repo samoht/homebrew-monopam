@@ -2,12 +2,12 @@ class GitX < Formula
   desc "Fast git operations on the object DB (no checkout)"
   homepage "https://tangled.org/gazagnaire.org/git-x"
   license "ISC"
-  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "9c7cfbb598ec5b709439158712db26318961fbe2"
-  version "20260904-9c7cfbb598ec5b709439158712db26318961fbe2"
+  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "bf6f0d85f9a9e95846a70f64248b349745032fe7"
+  version "20260922-bf6f0d85f9a9e95846a70f64248b349745032fe7"
 
   bottle do
     root_url "https://homebrew-bottles.s3.fr-par.scw.cloud/git-x"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "fd07b03315259805e1771cf9e7f31ed4c92105b37b1898689aa12a642f920ec1"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "888f807d57de4aa757e75a61ac1557080e214e53364ea9b822575fe41472aa5b"
   end
 
   head "https://tangled.org/gazagnaire.org/ocaml-git.git", branch: "main"

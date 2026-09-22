@@ -2,12 +2,12 @@ class Uniboot < Formula
   desc "Bootable disk image builder"
   homepage "https://tangled.org/gazagnaire.org/uniboot"
   license "ISC"
-  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "9c7cfbb598ec5b709439158712db26318961fbe2"
-  version "20260904-9c7cfbb598ec5b709439158712db26318961fbe2"
+  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "bf6f0d85f9a9e95846a70f64248b349745032fe7"
+  version "20260922-bf6f0d85f9a9e95846a70f64248b349745032fe7"
 
   bottle do
     root_url "https://homebrew-bottles.s3.fr-par.scw.cloud/uniboot"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "2137c739011d892111b76829340e6444a6767098db94af396f570735f2bb925f"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "573b579f595d255f5fdf34db62ea57671974118b71d74c048ce6f07c7d5d535d"
   end
 
   head "https://tangled.org/gazagnaire.org/ocaml-git.git", branch: "main"
