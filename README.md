@@ -25,6 +25,7 @@ brew tap samoht/monopam
 | `merlint` | Opinionated OCaml linter powered by Merlin |
 | `meross` | Meross smart plug control and monitoring |
 | `monopam` | OCaml monorepo manager with git subtrees |
+| `mq` | Local merge queue with content-bound gate verdicts |
 | `mrg` | Build and run mirage-eio unikernels across backends |
 | `opam-x` | Fast opam operations and cross-compilation toolchains |
 | `precommit` | Pre-commit hook manager for OCaml projects |
@@ -40,7 +41,7 @@ brew tap samoht/monopam
 
 ```bash
 # Install pre-built binaries
-brew install agent bottler crow dupfind git-x irm linkedin matter mdns-query merlint meross monopam mrg opam-x precommit prune skills slack slirp uniboot uplink vz
+brew install agent bottler crow dupfind git-x irm linkedin matter mdns-query merlint meross monopam mq mrg opam-x precommit prune skills slack slirp uniboot uplink vz
 
 # Or build from source
 brew install --HEAD agent
