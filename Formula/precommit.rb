@@ -2,12 +2,12 @@ class Precommit < Formula
   desc "Pre-commit hook manager for OCaml projects"
   homepage "https://tangled.org/gazagnaire.org/precommit"
   license "ISC"
-  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "f8d731a16c87a1ef20ba1886e3a9066a2a28d24a"
-  version "20261016-f8d731a16c87a1ef20ba1886e3a9066a2a28d24a-dirty"
+  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "b425d98700649f184f63bc7e5a4d1de5acc77546"
+  version "20261027-b425d98700649f184f63bc7e5a4d1de5acc77546-dirty"
 
   bottle do
     root_url "https://homebrew-bottles.s3.fr-par.scw.cloud/precommit"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "49ba4352e1038bcfd9ddfaf43198662c81e5cddb2ad3ee4eedd8348e1af58378"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "3c7ced15b00bbde2746087e94342e1403a77a09b7a3583aca2a118e8693ab16e"
   end
 
   head "https://tangled.org/gazagnaire.org/ocaml-git.git", branch: "main"

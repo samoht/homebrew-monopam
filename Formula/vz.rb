@@ -2,12 +2,12 @@ class Vz < Formula
   desc "Boot a Linux VM with a user-mode slirp network, no sudo"
   homepage "https://tangled.org/gazagnaire.org/vz"
   license "ISC"
-  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "f8d731a16c87a1ef20ba1886e3a9066a2a28d24a"
-  version "20261016-f8d731a16c87a1ef20ba1886e3a9066a2a28d24a-dirty"
+  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "b425d98700649f184f63bc7e5a4d1de5acc77546"
+  version "20261027-b425d98700649f184f63bc7e5a4d1de5acc77546-dirty"
 
   bottle do
     root_url "https://homebrew-bottles.s3.fr-par.scw.cloud/vz"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "1a1de1358b3b7380e58dd80afe2bc45b1de97b1778350fc803027157782a63fb"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "66916b8677eb6f46a0a011522969e8e4cb34dfcab9f699c8a741bb7c7219d31e"
   end
 
   head "https://tangled.org/gazagnaire.org/ocaml-git.git", branch: "main"

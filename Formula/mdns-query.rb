@@ -2,12 +2,12 @@ class MdnsQuery < Formula
   desc "mDNS service discovery query tool"
   homepage "https://tangled.org/gazagnaire.org/mdns-query"
   license "ISC"
-  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "f8d731a16c87a1ef20ba1886e3a9066a2a28d24a"
-  version "20261016-f8d731a16c87a1ef20ba1886e3a9066a2a28d24a-dirty"
+  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "b425d98700649f184f63bc7e5a4d1de5acc77546"
+  version "20261027-b425d98700649f184f63bc7e5a4d1de5acc77546-dirty"
 
   bottle do
     root_url "https://homebrew-bottles.s3.fr-par.scw.cloud/mdns-query"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "f314309e47f719b248195fcf1aa1a60c66ebc04d16094201744aa3b631c3612b"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "b8b9b672f2f53f9df1b419f07dd1a0b7aa1c38bb777d06d247e7e0dda622a297"
   end
 
   head "https://tangled.org/gazagnaire.org/ocaml-git.git", branch: "main"

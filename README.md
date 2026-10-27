@@ -16,10 +16,9 @@ brew tap samoht/monopam
 | `bottler` | Homebrew bottle builder and tap manager |
 | `crow` | Crowbar campaign orchestrator for AFL fuzzing |
 | `dupfind` | Find cross-package duplicate code |
-| `git-mono` | Pure OCaml git subtree split |
+| `git-mono` | Pure OCaml git subtree split (retired) |
 | `git-x` | Fast git operations on the object DB (no checkout) |
 | `irm` | Content-addressable store with Git support |
-| `k7` | Record terminal programs, cram tests and VHS tapes as animated SVG |
 | `linkedin` | LinkedIn CLI for profiles, posts, and cookies |
 | `matter` | Matter smart home device discovery and control |
 | `mdns-query` | mDNS service discovery query tool |
@@ -42,7 +41,7 @@ brew tap samoht/monopam
 
 ```bash
 # Install pre-built binaries
-brew install agent bottler crow dupfind git-mono git-x irm k7 linkedin matter mdns-query merlint meross monopam mq mrg opam-x precommit prune skills slack slirp uniboot uplink vz
+brew install agent bottler crow dupfind git-x irm linkedin matter mdns-query merlint meross monopam mq mrg opam-x precommit prune skills slack slirp uniboot uplink vz
 
 # Or build from source
 brew install --HEAD agent

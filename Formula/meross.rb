@@ -2,12 +2,12 @@ class Meross < Formula
   desc "Meross smart plug control and monitoring"
   homepage "https://tangled.org/gazagnaire.org/meross"
   license "ISC"
-  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "f8d731a16c87a1ef20ba1886e3a9066a2a28d24a"
-  version "20261016-f8d731a16c87a1ef20ba1886e3a9066a2a28d24a-dirty"
+  url "https://tangled.org/gazagnaire.org/ocaml-git.git", using: :git, revision: "b425d98700649f184f63bc7e5a4d1de5acc77546"
+  version "20261027-b425d98700649f184f63bc7e5a4d1de5acc77546-dirty"
 
   bottle do
     root_url "https://homebrew-bottles.s3.fr-par.scw.cloud/meross"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "62e23b2e262f0c0d39210b5be39c9766e8579575bc6f689e55cc38b53649cf8a"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "9482adfbd9865fe3c080f7c848023ceb5c442f0ebaa80260d816399ccbaaf6a7"
   end
 
   head "https://tangled.org/gazagnaire.org/ocaml-git.git", branch: "main"
